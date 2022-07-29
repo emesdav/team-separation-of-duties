@@ -1,5 +1,4 @@
-from Classes.Validate import Validate
+from internet_forensics.validation import Validate
 
-#firstCall = Validate("123")
-print(Validate("emmanuel@eshun-davies.info").IfEmail())
+print(Validate("dummy_user@dummy_domain.com").IfEmail())
 print(Validate("1234").IfInt())
