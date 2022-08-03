@@ -11,9 +11,10 @@ user authentication with the necessary credentials
 """
 class db_cnx():
 # establishing connection to database
-    def db_connect(config): # parameters will be held in a config file as per python guidelines
+    def db_connect(self, config): # parameters will be held in a config file as per python guidelines
         try:
             cnx = mysql.connector.connect(config)
+            self.cursor = cnx.cursor()
         except mysql.connector.Error as err:
             if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
                 print("Something is wrong with your user name or password")
