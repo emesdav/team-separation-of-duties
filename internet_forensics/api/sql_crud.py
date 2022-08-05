@@ -3,7 +3,7 @@ import database_connect
 from internet_forensics.api.database_connect import db_cnx
 
 
-class crudOps():
+class crud_ops():
 
     # function to read whole table, to be used when user asks for all records of a topic
     def readWholeTable(table):
@@ -20,7 +20,7 @@ class crudOps():
 
     # method to change the status of a record, only for non personal data
 
-    def delNonPersRecord(table, recordId, status):
+    def del_non_pers_record(table, recordId, status):
         connection = db_cnx.db_connect(config="")  # configs are passed here
         cursor = connection.cursor
 
@@ -31,7 +31,7 @@ class crudOps():
         cursor.close()
         connection.close()
 
-    def readRecord(table, recordId):
+    def read_records(table, recordId):
         connection = db_cnx.db_connect(config="")  # configs are passed here
         cursor = connection.cursor
 
@@ -41,7 +41,7 @@ class crudOps():
         cursor.close()
         connection.close()
 
-    def readUserData(username):
+    def read_user_data(username):
         connection = db_cnx.db_connect(config="")  # configs are passed here
         cursor = connection.cursor
 
@@ -51,7 +51,7 @@ class crudOps():
         cursor.close()
         connection.close()
 
-    def deleteAllPersRecords(username):
+    def delete_all_pers_records(username):
         connection = db_cnx.db_connect(config="")  # configs are passed here
         cursor = connection.cursor
 
