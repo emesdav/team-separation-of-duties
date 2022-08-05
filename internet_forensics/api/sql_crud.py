@@ -1,6 +1,9 @@
-
-import database_connect
 from internet_forensics.api.database_connect import db_cnx
+
+"""
+CRUD opeations to be performed on database data, these will be imported in api routes file
+and will be called with specific routes
+"""
 
 
 class crud_ops():
@@ -57,6 +60,17 @@ class crud_ops():
 
         cursor.execute(
             "DELETE * FROM users WHERE username= %s", (username))
+
+        cursor.close()
+        connection.close()
+
+    def update_pers_record(property, value, username):
+        connection = db_cnx.db_connect(config="")  # configs are passed here
+        cursor = connection.cursor
+
+        # will include sql injection protection
+        cursor.execute("UPDATE users SET %s= %s WHERE username= %s",
+                       (property, value, username))
 
         cursor.close()
         connection.close()
