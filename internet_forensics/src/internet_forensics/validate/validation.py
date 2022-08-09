@@ -2,13 +2,14 @@
 The purpose of this file is to ensure that every input is validated against the expected data type.
 """
 
-import logging
-
 from re import fullmatch
 
 from typing import Union
 
 from .constants import EMAIL_VALID_PATTERN, FIRST_SUB_STRING_VAL_LOG_MSG
+from ..logging.custom_logger import generate_custom_logger
+
+custom_logger = generate_custom_logger()
 
 
 class Validate:
@@ -16,8 +17,6 @@ class Validate:
     This class validates if a value were either an integer, a float, a string, or a valid e-mail address, and
     returns it via the relevant method if so.
     """
-
-    _log = logging.getLogger(__name__)
 
     def __init__(self, value: Union[float, int, str]):
         """
@@ -27,7 +26,7 @@ class Validate:
         """
         if value is not None:
             self.value = value
-            self._log.debug(f"{'The value passed is: '}{self.value}")
+            custom_logger.debug(f"{'The value passed is: '}{self.value}")
         else:
             raise ValueError("No value has been provided. Please add a value correctly.")
 
@@ -47,7 +46,7 @@ class Validate:
         """
 
         if isinstance(self.value, int):
-            self._log.info(
+            custom_logger.info(
               f"{'The following valid integer value has been passed: '}{self.value}"
             )
             return self.value
@@ -64,7 +63,7 @@ class Validate:
         """
 
         if isinstance(self.value, str):
-            self._log.info(
+            custom_logger.info(
               f"{'The following valid string value has been passed: '}{self.value}"
             )
             return self.value
@@ -81,7 +80,7 @@ class Validate:
         """
 
         if isinstance(self.value, float):
-            self._log.info(
+            custom_logger.info(
               f"{'The following valid float value has been passed: '}{self.value}"
             )
             return self.value
@@ -103,7 +102,7 @@ class Validate:
         if not is_email_valid:
             raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'e-mail address: '}{self.value}")
         else:
-            self._log.info(
+            custom_logger.info(
               f"{'The following valid e-mail address has been passed: '}{self.value}"
             )
         return is_email_valid
