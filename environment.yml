@@ -7,5 +7,3 @@ dependencies:
   - pytest-cov=3.0.0
   - python=3.9.7
   - sqlite=3.38.5
-  - flask=2.2.0
-  - mysql-connector-python=8.0.30
