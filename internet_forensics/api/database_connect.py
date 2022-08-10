@@ -1,7 +1,5 @@
-# library to connect to mysql db
-
 from errno import errorcode
-import mysql.connector
+import pyodbc
 
 """ 
 This is a default blank script to connect to our database that will be filled 
@@ -15,14 +13,10 @@ class db_cnx():
     # parameters will be held in a config file as per python guidelines
     def db_connect(self, config):
         try:
-            cnx = mysql.connector.connect(config)
+            cnx = pyodbc.connect(config)
             self.cursor = cnx.cursor()
-        except mysql.connector.Error as err:
-            if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
-                print("Something is wrong with your user name or password")
-            elif err.errno == errorcode.ER_BAD_DB_ERROR:
-                print("Database does not exist")
-            else:
-                print(err)
+        except pyodbc.Error as ex:
+            sqlstate = ex.args[1]
+            print(sqlstate)
         else:
             cnx.close()
