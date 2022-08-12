@@ -16,6 +16,12 @@ Update conda by executing the following command:
 
 `conda update -n base -c defaults conda`
 
+some people are likely to run into an issue when running the above command for updating conda.
+
+A known issue would be `"PackageNotInstalledError: Package is not installed in prefix."` In such case, the below command to update all and not selective appears to be an alternative solution. It may appear to be an overkill but works and you need to update all anyway.
+
+`conda update --all`
+
 * Create the virtual environment
 
 Create a conda virtual environment named `internet_forensics` and install the required dependencies by executing the 

@@ -3,12 +3,12 @@ The purpose of this file is to ensure that every input is validated against the 
 """
 
 import logging
-
 from re import fullmatch
-
 from typing import Union
+from .validate_constants import EMAIL_VALID_PATTERN, FIRST_SUB_STRING_VAL_LOG_MSG
 
-from .constants import EMAIL_VALID_PATTERN, FIRST_SUB_STRING_VAL_LOG_MSG
+# TODO: Insteqd of raising a value error that tells the user who could be an attacker exactly what is happening,
+#  We will instead log the eror and only return true or false. feedback can be handled by method or etc
 
 
 class Validate:
@@ -37,7 +37,7 @@ class Validate:
     def __repr__(self):
         return f"{__class__.__name__}: (value: '{self.value}')"
 
-    def validate_integer(self):
+    def if_integer(self):
         """
         This function validates if a value were an integer and returns it if so.
 
@@ -54,7 +54,7 @@ class Validate:
         else:
             raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'integer: '}{self.value}")
 
-    def validate_string(self):
+    def if_string(self):
         """
         This function validates if a value were a string and returns it if so.
 
@@ -71,7 +71,7 @@ class Validate:
         else:
             raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'string: '}{self.value}")
 
-    def validate_float(self):
+    def if_float(self):
         """
         This function validates if a value were a float and returns it if so.
 
@@ -88,7 +88,7 @@ class Validate:
         else:
             raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'float: '}{self.value}")
 
-    def validate_email(self):
+    def if_email(self):
         """
         This function validates if a value were a valid e-mail address based on a RegEx pattern defined in the constant
         EMAIL_VALID_PATTERN and returns it if so.

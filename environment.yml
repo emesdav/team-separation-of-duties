@@ -7,3 +7,4 @@ dependencies:
   - pytest-cov=3.0.0
   - python=3.9.7
   - sqlite=3.38.5
+  - click-8.0.4-py39hecd8cb5_0
