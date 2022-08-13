@@ -1,8 +1,17 @@
+"""
+The purpose of this file is to create a global custom logger to leverage in all files of the application
+to build an auditable and detailed trace of all operations performed and/or warnings/errors occurred throughout it.
+"""
+
 import os
 import sys
 import logging
 
-from .constants import DATE_TIME_FMT, LOG_FILE_NAME_W_EXT
+from .constants import (
+    DATE_TIME_FMT,
+    LOG_FILE_NAME_W_EXT,
+    FORMAT_OF_LOG_MSG
+)
 
 
 def generate_custom_logger(output_folder: str = '', name: str = '') -> logging.Logger:
@@ -13,7 +22,7 @@ def generate_custom_logger(output_folder: str = '', name: str = '') -> logging.L
         output_folder: string
                     the output folder to save the log file into.
         name: string
-            the name for the logger.
+            the name for or purpose of the logger.
 
     Returns:
         custom_logger: Logger
@@ -25,8 +34,9 @@ def generate_custom_logger(output_folder: str = '', name: str = '') -> logging.L
     custom_logger.setLevel(logging.DEBUG)
     custom_logger.propagate = False
 
-    # Set formatter to be as detailed as required, including timestamp, filename, logging level, and log message.
-    format_log = '[%(asctime)s %(name)s] (%(filename)s %(lineno)d): %(levelname)s %(message)'
+    # Set formatter to be as detailed as per the constant 'FORMAT_OF_LOG_MSG' (see constants.py for further details
+    # on this).
+    format_log = FORMAT_OF_LOG_MSG
 
     # Add console handler.
     handler_console = logging.StreamHandler(sys.stdout)
