@@ -1,4 +1,5 @@
 from internet_forensics.api.database_connect import db_cnx
+import logging
 
 """
 CRUD opeations to be performed on database data, these will be imported in api routes file
@@ -6,20 +7,21 @@ and will be called with specific routes
 """
 
 
-class crud_ops():
+class CRUDOops():
 
     # function to read whole table, to be used when user asks for all records of a topic
-    def readWholeTable(table):
+    def read_whole_table(table):
         connection = db_cnx.db_connect(config="")  # configs are passed here
         cursor = connection.cursor
 
         # reading database data from a specific table, %s is not good practice but will not use user input
         cursor.execute("Select * from (%s)", (table))
         result = cursor.fetchall()
-        print(result)
-
         cursor.close()
         connection.close()
+        logging.debug(result)
+
+        return result
 
     # method to change the status of a record, only for non personal data
 

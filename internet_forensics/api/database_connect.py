@@ -8,7 +8,7 @@ user authentication with the necessary credentials
 """
 
 """
-To connect to DB we'll need the configuration data drom the DB creation which will be provided when the DB is ready
+To connect to DB we'll need the configuration data from the DB creation which will be provided when the DB is ready
 here is an example:
 connection_string = (
     'DRIVER=MySQL ODBC 8.0 ANSI Driver;'
@@ -21,7 +21,7 @@ connection_string = (
 """
 
 
-class db_cnx():
+class DBCnx():
     # establishing connection to database
     # parameters will be held in a config file as per python guidelines
     def db_connect(self, config):
@@ -30,6 +30,6 @@ class db_cnx():
             self.cursor = cnx.cursor()
         except pyodbc.Error as ex:
             sqlstate = ex.args[1]
-            logging.debug(sqlstate)
+            logging.error(sqlstate)
         else:
             cnx.close()
