@@ -7,13 +7,13 @@ import os
 from re import fullmatch
 from typing import Union
 
-from constants import (
+from .constants import (
     EMAIL_VALID_PATTERN,
     FIRST_SUB_STRING_VAL_LOG_MSG,
     FOLDER_NAME_LOG_FILE,
     NAME_OF_DATA_VAL_LOG
 )
-from internet_forensics.src.internet_forensics.logging.custom_logger import generate_custom_logger
+from ..logging.custom_logger import generate_custom_logger
 
 # Get current working directory's path and then create output folder to save .log file.
 current_wd_path = os.path.abspath(os.getcwd())

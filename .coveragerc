@@ -3,6 +3,7 @@ source = internet_forensics
 
 [report]
 omit =
+    internet_forensics/src/internet_forensics/logging/custom_logger.py
     */__init__.py
     */constants.py
 
