@@ -29,9 +29,4 @@ class UserManager:
         # We simply calculate 30days from the day of request to delete the data
         deactivation_date = str(date.today() + timedelta(days=30))
 
-        # We send the deactivation Date in an update to the database
-
-        # TODO: A cron job that will run daily to automatically deactivate the accounts on time
-        # cron job should not be in this file. (Obviously)
-
         click.echo(deactivation_date)
