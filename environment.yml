@@ -1,6 +1,7 @@
 name: internet_forensics
 channels:
   - conda
+  - pip
 dependencies:
   - pip=21.2.4
   - pytest=6.2.5
@@ -9,3 +10,5 @@ dependencies:
   - sqlite=3.38.5
   - flask=2.2.0
   - pyodbc=4.0.34
+  - pip:
+      - safety==2.1.1

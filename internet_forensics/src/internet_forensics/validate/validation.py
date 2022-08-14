@@ -2,13 +2,25 @@
 The purpose of this file is to ensure that every input is validated against the expected data type.
 """
 
-import logging
+import os
 
 from re import fullmatch
-
 from typing import Union
 
-from .constants import EMAIL_VALID_PATTERN, FIRST_SUB_STRING_VAL_LOG_MSG
+from constants import (
+    EMAIL_VALID_PATTERN,
+    FIRST_SUB_STRING_VAL_LOG_MSG,
+    FOLDER_NAME_LOG_FILE,
+    NAME_OF_DATA_VAL_LOG
+)
+from internet_forensics.src.internet_forensics.logging.custom_logger import generate_custom_logger
+
+# Get current working directory's path and then create output folder to save .log file.
+current_wd_path = os.path.abspath(os.getcwd())
+output_dir_log = os.path.join(current_wd_path, FOLDER_NAME_LOG_FILE)
+os.makedirs(output_dir_log, exist_ok=True)
+
+custom_logger = generate_custom_logger(output_folder=output_dir_log, name=NAME_OF_DATA_VAL_LOG)
 
 
 class Validate:
@@ -16,8 +28,6 @@ class Validate:
     This class validates if a value were either an integer, a float, a string, or a valid e-mail address, and
     returns it via the relevant method if so.
     """
-
-    _log = logging.getLogger(__name__)
 
     def __init__(self, value: Union[float, int, str]):
         """
@@ -27,7 +37,7 @@ class Validate:
         """
         if value is not None:
             self.value = value
-            self._log.debug(f"{'The value passed is: '}{self.value}")
+            custom_logger.debug(f"{'The value passed is: '}{self.value}")
         else:
             raise ValueError("No value has been provided. Please add a value correctly.")
 
@@ -47,7 +57,7 @@ class Validate:
         """
 
         if isinstance(self.value, int):
-            self._log.info(
+            custom_logger.info(
               f"{'The following valid integer value has been passed: '}{self.value}"
             )
             return self.value
@@ -64,7 +74,7 @@ class Validate:
         """
 
         if isinstance(self.value, str):
-            self._log.info(
+            custom_logger.info(
               f"{'The following valid string value has been passed: '}{self.value}"
             )
             return self.value
@@ -81,7 +91,7 @@ class Validate:
         """
 
         if isinstance(self.value, float):
-            self._log.info(
+            custom_logger.info(
               f"{'The following valid float value has been passed: '}{self.value}"
             )
             return self.value
@@ -103,7 +113,7 @@ class Validate:
         if not is_email_valid:
             raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'e-mail address: '}{self.value}")
         else:
-            self._log.info(
+            custom_logger.info(
               f"{'The following valid e-mail address has been passed: '}{self.value}"
             )
         return is_email_valid
