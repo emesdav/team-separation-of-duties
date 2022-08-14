@@ -1,10 +1,20 @@
+from internet_forensics.api.constants import FOLDER_NAME_LOG_FILE, NAME_OF_DATA_VAL_LOG
 from internet_forensics.api.database_connect import db_cnx
-import logging
+from internet_forensics.src.internet_forensics.logging.custom_logger import generate_custom_logger
+import os
+
 
 """
 CRUD opeations to be performed on database data, these will be imported in api routes file
 and will be called with specific routes
 """
+
+current_wd_path = os.path.abspath(os.getcwd())
+output_dir_log = os.path.join(current_wd_path, FOLDER_NAME_LOG_FILE)
+os.makedirs(output_dir_log, exist_ok=True)
+
+custom_logger = generate_custom_logger(
+    output_folder=output_dir_log, name=NAME_OF_DATA_VAL_LOG)
 
 
 class CRUDOps():
@@ -19,7 +29,7 @@ class CRUDOps():
         result = cursor.fetchall()
         cursor.close()
         connection.close()
-        logging.debug(result)
+        custom_logger.debug(f"{'Table reported' + table + ':'}{result}")
 
         return result
 
@@ -34,6 +44,8 @@ class CRUDOps():
         cursor.execute("UPDATE %s SET status= %s WHERE recordId= %s",
                        (table, status, recordId))
 
+        custom_logger.debug(f"{'the following table has been deleted'}{table}")
+
         cursor.close()
         connection.close()
 
@@ -44,6 +56,8 @@ class CRUDOps():
 
         cursor.execute(
             "SELECT * FROM TABLE= %s WHERE recordId= %s", (table, recordId))
+
+        custom_logger.debug(f"{'printed results for:'}{recordId}")
 
         cursor.close()
         connection.close()
@@ -66,6 +80,8 @@ class CRUDOps():
 
         cursor.execute(
             "DELETE * FROM users WHERE username= %s", (username))
+
+        custom_logger.debug(f"{'deleted records for user:'}{username}")
 
         cursor.close()
         connection.close()
