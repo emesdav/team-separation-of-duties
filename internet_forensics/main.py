@@ -10,21 +10,20 @@ fresh_start = True
 
 @click.command()
 def main():
+    global fresh_start
     # log start of application
     if fresh_start:
         click.echo(WELCOME_SCREEN_MESSAGE)
 
     response = click.prompt(MAIN_MENU_OPTION_LIST)
 
-    restart = False
-
-    while not Validate(response).if_integer() or restart:
-        restart = False
+    while not Validate(response).if_integer():
         if response == "1":
             main_user_login()
         else:
-            click.echo(WRONG_MENU_OPTION_INPUT + " : " + response)
-            restart = True
+            click.echo(WRONG_MENU_OPTION_INPUT)
+            fresh_start = False
+            main()
 
 
 @click.command()
