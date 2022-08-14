@@ -7,7 +7,7 @@ and will be called with specific routes
 """
 
 
-class CRUDOops():
+class CRUDOps():
 
     # function to read whole table, to be used when user asks for all records of a topic
     def read_whole_table(table):
@@ -26,7 +26,8 @@ class CRUDOops():
     # method to change the status of a record, only for non personal data
 
     def del_non_pers_record(table, recordId, status):
-        connection = db_cnx.db_connect(config="")  # configs are passed here
+        # TODO: configs are passed here
+        connection = db_cnx.db_connect(config="")
         cursor = connection.cursor
 
         # will include sql injection protection
@@ -37,7 +38,8 @@ class CRUDOops():
         connection.close()
 
     def read_records(table, recordId):
-        connection = db_cnx.db_connect(config="")  # configs are passed here
+        # TODO: configs are passed here
+        connection = db_cnx.db_connect(config="")
         cursor = connection.cursor
 
         cursor.execute(
@@ -47,7 +49,8 @@ class CRUDOops():
         connection.close()
 
     def read_user_data(username):
-        connection = db_cnx.db_connect(config="")  # configs are passed here
+        # TODO: configs are passed here
+        connection = db_cnx.db_connect(config="")
         cursor = connection.cursor
 
         cursor.execute(
@@ -57,7 +60,8 @@ class CRUDOops():
         connection.close()
 
     def delete_all_pers_records(username):
-        connection = db_cnx.db_connect(config="")  # configs are passed here
+        # TODO: configs are passed here
+        connection = db_cnx.db_connect(config="")
         cursor = connection.cursor
 
         cursor.execute(
@@ -67,7 +71,8 @@ class CRUDOops():
         connection.close()
 
     def update_pers_record(property, value, username):
-        connection = db_cnx.db_connect(config="")  # configs are passed here
+        # TODO: configs are passed here
+        connection = db_cnx.db_connect(config="")
         cursor = connection.cursor
 
         # will include sql injection protection
