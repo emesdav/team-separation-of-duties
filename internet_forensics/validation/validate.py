@@ -7,8 +7,9 @@ from re import fullmatch
 from typing import Union
 from .validate_constants import EMAIL_VALID_PATTERN, FIRST_SUB_STRING_VAL_LOG_MSG
 
+
 # TODO: Insteqd of raising a value error that tells the user who could be an attacker exactly what is happening,
-#  We will instead log the eror and only return true or false. feedback can be handled by method or etc
+#  We will instead log the error and only return true or false. feedback can be handled by method or etc
 
 
 class Validate:
@@ -48,11 +49,12 @@ class Validate:
 
         if isinstance(self.value, int):
             self._log.info(
-              f"{'The following valid integer value has been passed: '}{self.value}"
+                f"{'The following valid integer value has been passed: '}{self.value}"
             )
-            return self.value
+            return True
         else:
-            raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'integer: '}{self.value}")
+            # raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'integer: '}{self.value}")
+            return False
 
     def if_string(self):
         """
@@ -65,11 +67,12 @@ class Validate:
 
         if isinstance(self.value, str):
             self._log.info(
-              f"{'The following valid string value has been passed: '}{self.value}"
+                f"{'The following valid string value has been passed: '}{self.value}"
             )
-            return self.value
+            return True
         else:
-            raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'string: '}{self.value}")
+            # raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'string: '}{self.value}")
+            return False
 
     def if_float(self):
         """
@@ -82,11 +85,12 @@ class Validate:
 
         if isinstance(self.value, float):
             self._log.info(
-              f"{'The following valid float value has been passed: '}{self.value}"
+                f"{'The following valid float value has been passed: '}{self.value}"
             )
-            return self.value
+            return True
         else:
-            raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'float: '}{self.value}")
+            # raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'float: '}{self.value}")
+            return False
 
     def if_email(self):
         """
@@ -99,11 +103,12 @@ class Validate:
         """
 
         # Enforce to return False as 'fullmatch' returns None.
-        is_email_valid = False if fullmatch(EMAIL_VALID_PATTERN, self.value) is None else self.value
+        is_email_valid = False if fullmatch(EMAIL_VALID_PATTERN, self.value) is None else True
         if not is_email_valid:
-            raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'e-mail address: '}{self.value}")
+            # raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'e-mail address: '}{self.value}")
+            return False
         else:
             self._log.info(
-              f"{'The following valid e-mail address has been passed: '}{self.value}"
+                f"{'The following valid e-mail address has been passed: '}{self.value}"
             )
         return is_email_valid

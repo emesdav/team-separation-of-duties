@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<SystemSettings>
+    <UserManager>
+        <LoginAttempts>3</LoginAttempts>
+    </UserManager>
+</SystemSettings>
