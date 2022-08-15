@@ -3,9 +3,10 @@ The purpose of this file is to ensure that every input is validated against the 
 """
 
 import logging
+import re
 from re import fullmatch
 from typing import Union
-from .validate_constants import EMAIL_VALID_PATTERN, FIRST_SUB_STRING_VAL_LOG_MSG
+from .constants import EMAIL_VALID_PATTERN, FIRST_SUB_STRING_VAL_LOG_MSG
 
 
 # TODO: Insteqd of raising a value error that tells the user who could be an attacker exactly what is happening,
@@ -37,4 +38,6 @@ class Sanitize:
         """
 
         """
-        return self.value
+        cleaned_string = re.escape(self.value)
+        print(cleaned_string)
+        return cleaned_string
