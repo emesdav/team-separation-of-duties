@@ -5,7 +5,7 @@ import os
 
 
 """
-CRUD opeations to be performed on database data, these will be imported in api routes file
+CRUD opeations to be performed on database data, these will be imported in API routes file
 and will be called with specific routes
 """
 
