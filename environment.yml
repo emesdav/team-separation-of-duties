@@ -10,5 +10,6 @@ dependencies:
   - sqlite=3.38.5
   - flask=2.2.0
   - pyodbc=4.0.34
+  - bcrypt=3.2.2
   - pip:
       - safety==2.1.1
