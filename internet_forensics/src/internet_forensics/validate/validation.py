@@ -29,7 +29,7 @@ class Validate:
     returns it via the relevant method if so.
     """
 
-    def __init__(self, value: Union[float, int, str]):
+    def __init__(self, value: Union[float, int, str]) -> None:
         """
         Args:
             value: Union[float, int, str]
@@ -41,13 +41,13 @@ class Validate:
         else:
             raise ValueError("No value has been provided. Please add a value correctly.")
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"<{__class__.__name__} having the input value '{self.value}' to validate>"
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{__class__.__name__}: (value: '{self.value}')"
 
-    def validate_integer(self):
+    def validate_integer(self) -> int:
         """
         This function validates if a value were an integer and returns it if so.
 
@@ -64,7 +64,7 @@ class Validate:
         else:
             raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'integer: '}{self.value}")
 
-    def validate_string(self):
+    def validate_string(self) -> str:
         """
         This function validates if a value were a string and returns it if so.
 
@@ -81,7 +81,7 @@ class Validate:
         else:
             raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'string: '}{self.value}")
 
-    def validate_float(self):
+    def validate_float(self) -> float:
         """
         This function validates if a value were a float and returns it if so.
 
@@ -98,7 +98,7 @@ class Validate:
         else:
             raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'float: '}{self.value}")
 
-    def validate_email(self):
+    def validate_email(self) -> str:
         """
         This function validates if a value were a valid e-mail address based on a RegEx pattern defined in the constant
         EMAIL_VALID_PATTERN and returns it if so.

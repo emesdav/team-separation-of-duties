@@ -9,12 +9,13 @@ import logging
 
 from .constants import (
     DATE_TIME_FMT,
+    EMPTY_STRING,
     LOG_FILE_NAME_W_EXT,
     FORMAT_OF_LOG_MSG
 )
 
 
-def generate_custom_logger(output_folder: str = '', name: str = '') -> logging.Logger:
+def generate_custom_logger(output_folder: str = EMPTY_STRING, name: str = EMPTY_STRING) -> logging.Logger:
     """
     This function creates a custom logger with the required level of logging and formatting.
 
