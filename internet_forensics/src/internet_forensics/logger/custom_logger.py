@@ -16,7 +16,7 @@ from .constants import (
 
 def generate_custom_logger(output_folder: str = '', name: str = '') -> logging.Logger:
     """
-    This function creates a custom logger with the required level of logging and formatting.
+    This function creates a custom logger with the required level of logger and formatting.
 
     Args:
         output_folder: string
@@ -29,7 +29,7 @@ def generate_custom_logger(output_folder: str = '', name: str = '') -> logging.L
                   the custom logger.
     """
 
-    # Instantiate initial logger and set logging level as debug.
+    # Instantiate initial logger and set logger level as debug.
     custom_logger = logging.getLogger(name)
     custom_logger.setLevel(logging.DEBUG)
     custom_logger.propagate = False

@@ -3,10 +3,9 @@ import sys
 
 import click
 from datetime import date, timedelta
-from internet_forensics.user_manager.user_manager import UserManager
-from internet_forensics.main_constants import *
-from internet_forensics.validation.validate import Validate
-from internet_forensics.user_manager import user_manager_constants as user_constants
+from internet_forensics.src.internet_forensics.user_manager.user_manager import UserManager
+from internet_forensics.src.internet_forensics.validate.validate import Validate
+from internet_forensics.src.internet_forensics.user_manager import constants as user_constants
 
 fresh_start = True
 
@@ -15,8 +14,6 @@ class UserManagerVC:
 
     @click.command()
     def main_user_login():
-        # Global Variables
-        global fresh_start
 
         # Action to be decided on
         login_attempts_count = 0
@@ -50,14 +47,12 @@ class UserManagerVC:
                 # Display Error
                 pass
         else:
-            # Let's move on
-            fresh_start = False
             # This restarts the entire application instead of exiting. Is there a better way to do this after an error?
             os.execl(sys.executable, sys.executable, *sys.argv)
             # It will be a great add to display something that says we started all over again
 
     @click.command()
-    def user_registration():
+    def main_user_registration():
         # Global Variables
         global fresh_start
 
@@ -82,11 +77,19 @@ class UserManagerVC:
         click.echo(user_constants.DATA_VERIFIED)
         # We can now proceed
 
-        click.echo(user_constants.LOGIN_VALIDATION_FAILED)
+    @click.command()
+    def main_user_password_reset():
 
-        # Per response, process request
-        # We simply calculate 30days from the day of request to delete the data
-        deactivation_date = str(date.today() + timedelta(days=30))
+        while not Validate(password).if_string():
+            password = click.prompt(user_constants.PROMPT_PASSWORD)
 
-        click.echo(deactivation_date)
+            response = "KEY FROM DB"
 
+            if response != "":
+                # Send Email
+
+                # Let`s go back to home
+                os.execl(sys.executable, sys.executable, *sys.argv)
+            else:
+                # Display Error
+                pass

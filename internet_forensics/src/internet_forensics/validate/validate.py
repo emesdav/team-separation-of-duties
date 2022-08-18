@@ -2,14 +2,7 @@
 The purpose of this file is to ensure that every input is validated against the expected data type.
 """
 
-<<<<<<<< HEAD:internet_forensics/validation/validate.py
-import logging
-from re import fullmatch
-from typing import Union
-from .constants import EMAIL_VALID_PATTERN, FIRST_SUB_STRING_VAL_LOG_MSG
-========
 import os
-
 from re import fullmatch
 from typing import Union
 
@@ -19,7 +12,8 @@ from .constants import (
     FOLDER_NAME_LOG_FILE,
     NAME_OF_DATA_VAL_LOG
 )
-from ..logging.custom_logger import generate_custom_logger
+
+from internet_forensics.src.internet_forensics.logger.custom_logger import generate_custom_logger
 
 # Get current working directory's path and then create output folder to save .log file.
 current_wd_path = os.path.abspath(os.getcwd())
@@ -27,11 +21,6 @@ output_dir_log = os.path.join(current_wd_path, FOLDER_NAME_LOG_FILE)
 os.makedirs(output_dir_log, exist_ok=True)
 
 custom_logger = generate_custom_logger(output_folder=output_dir_log, name=NAME_OF_DATA_VAL_LOG)
->>>>>>>> main:internet_forensics/src/internet_forensics/validate/validation.py
-
-
-# TODO: Insteqd of raising a value error that tells the user who could be an attacker exactly what is happening,
-#  We will instead log the error and only return true or false. feedback can be handled by method or etc
 
 
 class Validate:
@@ -68,13 +57,8 @@ class Validate:
         """
 
         if isinstance(self.value, int):
-<<<<<<<< HEAD:internet_forensics/validation/validate.py
-            self._log.info(
-                f"{'The following valid integer value has been passed: '}{self.value}"
-========
             custom_logger.info(
               f"{'The following valid integer value has been passed: '}{self.value}"
->>>>>>>> main:internet_forensics/src/internet_forensics/validate/validation.py
             )
             return True
         else:
@@ -91,13 +75,8 @@ class Validate:
         """
 
         if isinstance(self.value, str):
-<<<<<<<< HEAD:internet_forensics/validation/validate.py
-            self._log.info(
-                f"{'The following valid string value has been passed: '}{self.value}"
-========
             custom_logger.info(
               f"{'The following valid string value has been passed: '}{self.value}"
->>>>>>>> main:internet_forensics/src/internet_forensics/validate/validation.py
             )
             return True
         else:
@@ -114,13 +93,8 @@ class Validate:
         """
 
         if isinstance(self.value, float):
-<<<<<<<< HEAD:internet_forensics/validation/validate.py
-            self._log.info(
-                f"{'The following valid float value has been passed: '}{self.value}"
-========
             custom_logger.info(
               f"{'The following valid float value has been passed: '}{self.value}"
->>>>>>>> main:internet_forensics/src/internet_forensics/validate/validation.py
             )
             return True
         else:
@@ -143,12 +117,7 @@ class Validate:
             # raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'e-mail address: '}{self.value}")
             return False
         else:
-<<<<<<<< HEAD:internet_forensics/validation/validate.py
-            self._log.info(
-                f"{'The following valid e-mail address has been passed: '}{self.value}"
-========
             custom_logger.info(
               f"{'The following valid e-mail address has been passed: '}{self.value}"
->>>>>>>> main:internet_forensics/src/internet_forensics/validate/validation.py
             )
         return is_email_valid

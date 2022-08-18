@@ -15,7 +15,7 @@ OPTION_EXIT = "4. Exit\n"
 WELCOME_MESSAGE = "Welcome to the Dutch Police Portal. What do you want to do? \n"
 FIRST_SUB_STRING_VAL_LOG_MSG = "The following value is not a valid "
 VERIFYING_DATA = "Verifying the data you have provided..."
-DATA_VERIFIED = "Your Data is verified. Now logging you in"
+DATA_VERIFIED = "Your Data is verified. Now logger you in"
 LOGIN_VALIDATION_FAILED = "We are unable to verify your Username or password. Please try again"
 LOGIN_ATTEMPT_COUNT_REMAINING = "%(attempts_count)s out of %(allowed_attempts)s login attempts " \
                                 "remaining "

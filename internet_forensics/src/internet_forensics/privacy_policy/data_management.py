@@ -1,6 +1,7 @@
 import click
 from datetime import date, timedelta
 
+
 class DataManagement:
     def __init__(self):
         print("here ooooh")

@@ -1,6 +1,6 @@
 import unittest
 
-from internet_forensics.src.internet_forensics.validate.validation import Validate
+from internet_forensics.src.internet_forensics.validate.validate import Validate
 
 VALID_FLOAT = 5.
 VALID_INTEGER = 5

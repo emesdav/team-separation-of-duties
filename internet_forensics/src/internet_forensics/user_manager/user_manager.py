@@ -1,8 +1,4 @@
-import click
-from datetime import date, timedelta
-from .user_manager_constants import *
-from internet_forensics.validation.validate import Validate
-from internet_forensics.validation.sanitize import Sanitize
+from internet_forensics.src.internet_forensics.validate.sanitize import Sanitize
 
 
 # TODO: NOTE: Adding the self argument triggers an error.this should be fixed
@@ -43,6 +39,4 @@ class UserManager:
         # return userID
 
         return self.user_id
-
-
 
