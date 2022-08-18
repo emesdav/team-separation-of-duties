@@ -6,7 +6,7 @@ using Bcrypt library that follows cryptography security standards
 import os
 import bcrypt
 
-from internet_forensics.src.internet_forensics.encryption.constants import FOLDER_NAME_LOG_FILE, NAME_OF_DATA_VAL_LOG
+from src.internet_forensics.encryption.constants import FOLDER_NAME_LOG_FILE, NAME_OF_DATA_VAL_LOG
 from ..logging.custom_logger import generate_custom_logger
 
 current_wd_path = os.path.abspath(os.getcwd())
