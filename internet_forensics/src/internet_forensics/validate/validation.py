@@ -2,25 +2,18 @@
 The purpose of this file is to ensure that every input is validated against the expected data type.
 """
 
-import os
-
 from re import fullmatch
 from typing import Union
 
 from .constants import (
     EMAIL_VALID_PATTERN,
     FIRST_SUB_STRING_VAL_LOG_MSG,
-    FOLDER_NAME_LOG_FILE,
     NAME_OF_DATA_VAL_LOG
 )
 from ..logging.custom_logger import generate_custom_logger
 
-# Get current working directory's path and then create output folder to save .log file.
-current_wd_path = os.path.abspath(os.getcwd())
-output_dir_log = os.path.join(current_wd_path, FOLDER_NAME_LOG_FILE)
-os.makedirs(output_dir_log, exist_ok=True)
 
-custom_logger = generate_custom_logger(output_folder=output_dir_log, name=NAME_OF_DATA_VAL_LOG)
+custom_logger = generate_custom_logger(name=NAME_OF_DATA_VAL_LOG)
 
 
 class Validate:

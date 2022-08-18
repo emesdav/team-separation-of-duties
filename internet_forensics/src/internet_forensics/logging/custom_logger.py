@@ -10,12 +10,13 @@ import logging
 from .constants import (
     DATE_TIME_FMT,
     EMPTY_STRING,
+    FOLDER_NAME_LOG_FILE,
     LOG_FILE_NAME_W_EXT,
     FORMAT_OF_LOG_MSG
 )
 
 
-def generate_custom_logger(output_folder: str = EMPTY_STRING, name: str = EMPTY_STRING) -> logging.Logger:
+def generate_custom_logger(output_folder: str = FOLDER_NAME_LOG_FILE, name: str = EMPTY_STRING) -> logging.Logger:
     """
     This function creates a custom logger with the required level of logging and formatting.
 
@@ -29,6 +30,11 @@ def generate_custom_logger(output_folder: str = EMPTY_STRING, name: str = EMPTY_
         custom_logger: Logger
                   the custom logger.
     """
+
+    # Get current working directory's path and then create output folder to save .log file.
+    current_wd_path = os.path.abspath(os.getcwd())
+    output_dir_log = os.path.join(current_wd_path, FOLDER_NAME_LOG_FILE)
+    os.makedirs(output_dir_log, exist_ok=True)
 
     # Instantiate initial logger and set logging level as debug.
     custom_logger = logging.getLogger(name)
