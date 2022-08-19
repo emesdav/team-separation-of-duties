@@ -19,10 +19,14 @@ custom_logger = generate_custom_logger(
 
 class Encrypt():
 
-    """
-    This method hashes a password passed in string type converting it to byte string
-    """
-    def hash_pssw(password: str):
+    def hash_pssw(password: str) -> str:
+        """
+        This method hashes a password passed in string type converting it to byte string
+        then encrypts it with random generated salts and returns a string of the encrypted password
+
+        Arg: password string
+        Returns: hashed password
+        """
 
         # generating a bytestring
         pssw = password.encode('utf-8')
@@ -32,11 +36,15 @@ class Encrypt():
 
         return hashed
 
-    """
-    This method checks if the unhashed password(string type) matches the hashed password coming from DB, no conversions needed
-    returns true if password matches, returns false if password doesn't match
-    """
-    def check_pssw(password: str, hashed_password: str):
+    def check_pssw(password: str, hashed_password: str) -> bool:
+        """
+        This method checks if the unhashed password(string type) matches the hashed password coming from DB, 
+        no conversions needed
+        returns true if password matches, returns false if password doesn't match
+
+        Args: User input password, DB's hashed password
+        returns: Bool
+        """
 
         # check if the hashed password matches the non-hashed one
         if bcrypt.checkpw(password, hashed_password):
