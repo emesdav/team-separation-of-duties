@@ -33,6 +33,14 @@ To deactivate the environment, execute the following command:
 
 `conda deactivate`
 
+To install the project as a package in non-editable (standard) mode:
+
+`pip install .`
+
+To install the project as a package in editable (development) mode:
+
+`pip install -e .`
+
 * Data layer of the application
 
 SQLite is used as CRUD operations need to be performed and their results need to be persisted in a relational database. 
