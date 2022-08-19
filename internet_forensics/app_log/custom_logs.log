@@ -16,3 +16,369 @@
 [2022-08-18 21:38:45 data validation] (validate.py 40): DEBUG The value passed is: 4
 [2022-08-18 21:39:41 data validation] (validate.py 40): DEBUG The value passed is: 4
 [2022-08-18 21:39:41 data validation] (validate.py 40): DEBUG The value passed is: 4
+[2022-08-19 21:15:22 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 21:15:22 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 21:15:22 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:15:22 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:15:43 data validation] (validate.py 40): DEBUG The value passed is: emman@ddd.xds
+[2022-08-19 21:15:43 data validation] (validate.py 40): DEBUG The value passed is: emman@ddd.xds
+[2022-08-19 21:15:43 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: emman@ddd.xds
+[2022-08-19 21:15:43 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: emman@ddd.xds
+[2022-08-19 21:15:43 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:15:43 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:15:43 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 21:15:43 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 21:19:09 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 21:19:09 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 21:19:09 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:19:09 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:19:20 data validation] (validate.py 40): DEBUG The value passed is: eee@zezze.com
+[2022-08-19 21:19:20 data validation] (validate.py 40): DEBUG The value passed is: eee@zezze.com
+[2022-08-19 21:19:20 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: eee@zezze.com
+[2022-08-19 21:19:20 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: eee@zezze.com
+[2022-08-19 21:19:20 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:19:20 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:19:20 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 21:19:20 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 21:23:00 data validation] (validate.py 40): DEBUG The value passed is: sdfsqdf
+[2022-08-19 21:23:00 data validation] (validate.py 40): DEBUG The value passed is: sdfsqdf
+[2022-08-19 21:23:02 data validation] (validate.py 40): DEBUG The value passed is: sqdfsqf
+[2022-08-19 21:23:02 data validation] (validate.py 40): DEBUG The value passed is: sqdfsqf
+[2022-08-19 21:23:07 data validation] (validate.py 40): DEBUG The value passed is: é
+[2022-08-19 21:23:07 data validation] (validate.py 40): DEBUG The value passed is: é
+[2022-08-19 21:23:10 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 21:23:10 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 21:23:10 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:23:10 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:27:42 data validation] (validate.py 40): DEBUG The value passed is: qsdfsqdf@zerz.com
+[2022-08-19 21:27:42 data validation] (validate.py 40): DEBUG The value passed is: qsdfsqdf@zerz.com
+[2022-08-19 21:27:42 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: qsdfsqdf@zerz.com
+[2022-08-19 21:27:42 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: qsdfsqdf@zerz.com
+[2022-08-19 21:27:42 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:27:42 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:27:42 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 21:27:42 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 21:27:55 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 21:27:55 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 21:27:55 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:27:55 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:28:44 data validation] (validate.py 40): DEBUG The value passed is: sqfsdf
+[2022-08-19 21:28:44 data validation] (validate.py 40): DEBUG The value passed is: sqfsdf
+[2022-08-19 21:31:44 data validation] (validate.py 40): DEBUG The value passed is: sqfs
+[2022-08-19 21:31:44 data validation] (validate.py 40): DEBUG The value passed is: sqfs
+[2022-08-19 21:31:45 data validation] (validate.py 40): DEBUG The value passed is: sdfq
+[2022-08-19 21:31:45 data validation] (validate.py 40): DEBUG The value passed is: sdfq
+[2022-08-19 21:31:45 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:31:45 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:31:45 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 21:31:45 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 21:31:49 data validation] (validate.py 40): DEBUG The value passed is: 4
+[2022-08-19 21:31:49 data validation] (validate.py 40): DEBUG The value passed is: 4
+[2022-08-19 21:53:03 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 21:53:03 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 21:53:03 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 21:53:03 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:03:59 data validation] (validate.py 40): DEBUG The value passed is: 4
+[2022-08-19 22:03:59 data validation] (validate.py 40): DEBUG The value passed is: 4
+[2022-08-19 22:23:35 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:23:35 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:23:35 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:23:35 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:31:49 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:31:49 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:31:49 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:31:49 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:31:57 data validation] (validate.py 40): DEBUG The value passed is: dsqfsqdf@sdf.tom
+[2022-08-19 22:31:57 data validation] (validate.py 40): DEBUG The value passed is: dsqfsqdf@sdf.tom
+[2022-08-19 22:31:57 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: dsqfsqdf@sdf.tom
+[2022-08-19 22:31:57 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: dsqfsqdf@sdf.tom
+[2022-08-19 22:31:57 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:31:57 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:31:57 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:31:57 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:34:48 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:34:48 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:34:48 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:34:48 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:34:54 data validation] (validate.py 40): DEBUG The value passed is: qsfsqd@sdfsq.cop
+[2022-08-19 22:34:54 data validation] (validate.py 40): DEBUG The value passed is: qsfsqd@sdfsq.cop
+[2022-08-19 22:34:54 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: qsfsqd@sdfsq.cop
+[2022-08-19 22:34:54 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: qsfsqd@sdfsq.cop
+[2022-08-19 22:34:54 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:34:54 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:34:54 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:34:54 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:36:27 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:36:27 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:36:27 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:36:27 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:36:34 data validation] (validate.py 40): DEBUG The value passed is: dsqf@sqfsqf.com
+[2022-08-19 22:36:34 data validation] (validate.py 40): DEBUG The value passed is: dsqf@sqfsqf.com
+[2022-08-19 22:36:34 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: dsqf@sqfsqf.com
+[2022-08-19 22:36:34 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: dsqf@sqfsqf.com
+[2022-08-19 22:36:34 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:36:34 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:36:34 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:36:34 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:39:20 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:39:20 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:39:20 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:39:20 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:39:20 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:39:20 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:39:20 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:39:20 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:43:57 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:43:57 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:43:57 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:43:57 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:44:00 data validation] (validate.py 40): DEBUG The value passed is: sqfsqdf
+[2022-08-19 22:44:00 data validation] (validate.py 40): DEBUG The value passed is: sqfsqdf
+[2022-08-19 22:44:16 data validation] (validate.py 40): DEBUG The value passed is: qsfddsq@sqdfs.com
+[2022-08-19 22:44:16 data validation] (validate.py 40): DEBUG The value passed is: qsfddsq@sqdfs.com
+[2022-08-19 22:44:16 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: qsfddsq@sqdfs.com
+[2022-08-19 22:44:16 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: qsfddsq@sqdfs.com
+[2022-08-19 22:44:16 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:44:16 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:44:16 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:44:16 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:47:59 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:47:59 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:47:59 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:47:59 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:48:11 data validation] (validate.py 40): DEBUG The value passed is: sqdfsqdf@sqfqsf.sde
+[2022-08-19 22:48:11 data validation] (validate.py 40): DEBUG The value passed is: sqdfsqdf@sqfqsf.sde
+[2022-08-19 22:48:11 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: sqdfsqdf@sqfqsf.sde
+[2022-08-19 22:48:11 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: sqdfsqdf@sqfqsf.sde
+[2022-08-19 22:48:11 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:48:11 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:48:11 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:48:11 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:49:15 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:49:15 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:49:15 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:49:15 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:49:17 data validation] (validate.py 40): DEBUG The value passed is: sqdfsdqfs
+[2022-08-19 22:49:17 data validation] (validate.py 40): DEBUG The value passed is: sqdfsdqfs
+[2022-08-19 22:50:03 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:50:03 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:50:03 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:50:03 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:50:12 data validation] (validate.py 40): DEBUG The value passed is: qsdfsqd@sfdfsqf.com
+[2022-08-19 22:50:12 data validation] (validate.py 40): DEBUG The value passed is: qsdfsqd@sfdfsqf.com
+[2022-08-19 22:50:12 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: qsdfsqd@sfdfsqf.com
+[2022-08-19 22:50:12 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: qsdfsqd@sfdfsqf.com
+[2022-08-19 22:50:12 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:50:12 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:50:12 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:50:12 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:50:58 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:50:58 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 22:50:58 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:50:58 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:50:58 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:50:58 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:50:58 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:50:58 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 22:50:58 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 22:50:58 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 23:12:36 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:12:36 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:12:36 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:12:36 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:12:42 data validation] (validate.py 40): DEBUG The value passed is: fds@qsdqsd.sdf
+[2022-08-19 23:12:42 data validation] (validate.py 40): DEBUG The value passed is: fds@qsdqsd.sdf
+[2022-08-19 23:12:42 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: fds@qsdqsd.sdf
+[2022-08-19 23:12:42 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: fds@qsdqsd.sdf
+[2022-08-19 23:12:42 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:12:42 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:12:42 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 23:12:42 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 23:13:20 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:13:20 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:13:20 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:13:20 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:13:29 data validation] (validate.py 40): DEBUG The value passed is: qsfsfsf@sqfd.coe
+[2022-08-19 23:13:29 data validation] (validate.py 40): DEBUG The value passed is: qsfsfsf@sqfd.coe
+[2022-08-19 23:13:29 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: qsfsfsf@sqfd.coe
+[2022-08-19 23:13:29 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: qsfsfsf@sqfd.coe
+[2022-08-19 23:13:29 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:13:29 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:13:29 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 23:13:29 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 23:14:14 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:14:14 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:14:14 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:14:14 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:14:20 data validation] (validate.py 40): DEBUG The value passed is: qsfsqfd@sdfsf.sd
+[2022-08-19 23:14:20 data validation] (validate.py 40): DEBUG The value passed is: qsfsqfd@sdfsf.sd
+[2022-08-19 23:14:20 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: qsfsqfd@sdfsf.sd
+[2022-08-19 23:14:20 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: qsfsqfd@sdfsf.sd
+[2022-08-19 23:14:20 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:14:20 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:14:20 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 23:14:20 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 23:14:46 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:14:46 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:14:46 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:14:46 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:14:53 data validation] (validate.py 40): DEBUG The value passed is: sdsdqfq@qdqsdq.df
+[2022-08-19 23:14:53 data validation] (validate.py 40): DEBUG The value passed is: sdsdqfq@qdqsdq.df
+[2022-08-19 23:14:53 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: sdsdqfq@qdqsdq.df
+[2022-08-19 23:14:53 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: sdsdqfq@qdqsdq.df
+[2022-08-19 23:14:53 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:14:53 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:14:53 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 23:14:53 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 23:15:58 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:15:58 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:15:58 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:15:58 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:16:06 data validation] (validate.py 40): DEBUG The value passed is: sfsdqfsq@qdqsd.re
+[2022-08-19 23:16:06 data validation] (validate.py 40): DEBUG The value passed is: sfsdqfsq@qdqsd.re
+[2022-08-19 23:16:06 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: sfsdqfsq@qdqsd.re
+[2022-08-19 23:16:06 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: sfsdqfsq@qdqsd.re
+[2022-08-19 23:16:06 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:16:06 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:16:06 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 23:16:06 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 23:19:44 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:19:44 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:19:44 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:19:44 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:19:53 data validation] (validate.py 40): DEBUG The value passed is: fdsfsdqf@sdsf.dfd
+[2022-08-19 23:19:53 data validation] (validate.py 40): DEBUG The value passed is: fdsfsdqf@sdsf.dfd
+[2022-08-19 23:19:53 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: fdsfsdqf@sdsf.dfd
+[2022-08-19 23:19:53 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: fdsfsdqf@sdsf.dfd
+[2022-08-19 23:19:53 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:19:53 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:19:53 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 23:19:53 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 23:25:46 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:25:46 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:25:46 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:25:46 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:25:52 data validation] (validate.py 40): DEBUG The value passed is: sqdfsdq@fdsqfqs.cot
+[2022-08-19 23:25:52 data validation] (validate.py 40): DEBUG The value passed is: sqdfsdq@fdsqfqs.cot
+[2022-08-19 23:25:52 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: sqdfsdq@fdsqfqs.cot
+[2022-08-19 23:25:52 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: sqdfsdq@fdsqfqs.cot
+[2022-08-19 23:25:52 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:25:52 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:25:52 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 23:25:52 data validation] (validate.py 78): INFO The following valid string value has been passed: 
+[2022-08-19 23:28:59 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:28:59 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:28:59 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:28:59 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:29:10 data validation] (validate.py 40): DEBUG The value passed is: qsdfsq@sqdfqs.der
+[2022-08-19 23:29:10 data validation] (validate.py 40): DEBUG The value passed is: qsdfsq@sqdfqs.der
+[2022-08-19 23:29:10 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: qsdfsq@sqdfqs.der
+[2022-08-19 23:29:10 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: qsdfsq@sqdfqs.der
+[2022-08-19 23:29:10 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:29:10 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:29:14 data validation] (validate.py 40): DEBUG The value passed is: qsfsqfsqf
+[2022-08-19 23:29:14 data validation] (validate.py 40): DEBUG The value passed is: qsfsqfsqf
+[2022-08-19 23:29:14 data validation] (validate.py 78): INFO The following valid string value has been passed: qsfsqfsqf
+[2022-08-19 23:29:14 data validation] (validate.py 78): INFO The following valid string value has been passed: qsfsqfsqf
+[2022-08-19 23:31:43 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:31:43 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:31:43 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:31:43 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:31:50 data validation] (validate.py 40): DEBUG The value passed is: fsqfsqdf@sdfsqf.fd
+[2022-08-19 23:31:50 data validation] (validate.py 40): DEBUG The value passed is: fsqfsqdf@sdfsqf.fd
+[2022-08-19 23:31:50 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: fsqfsqdf@sdfsqf.fd
+[2022-08-19 23:31:50 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: fsqfsqdf@sdfsqf.fd
+[2022-08-19 23:31:50 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:31:50 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:32:06 data validation] (validate.py 40): DEBUG The value passed is: qsdfsqdfsqfsdf
+[2022-08-19 23:32:06 data validation] (validate.py 40): DEBUG The value passed is: qsdfsqdfsqfsdf
+[2022-08-19 23:32:06 data validation] (validate.py 78): INFO The following valid string value has been passed: qsdfsqdfsqfsdf
+[2022-08-19 23:32:06 data validation] (validate.py 78): INFO The following valid string value has been passed: qsdfsqdfsqfsdf
+[2022-08-19 23:39:35 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:39:35 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:39:35 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:39:35 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:39:41 data validation] (validate.py 40): DEBUG The value passed is: dsqfqsdf@sqdfsqd.sdf
+[2022-08-19 23:39:41 data validation] (validate.py 40): DEBUG The value passed is: dsqfqsdf@sqdfsqd.sdf
+[2022-08-19 23:39:41 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: dsqfqsdf@sqdfsqd.sdf
+[2022-08-19 23:39:41 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: dsqfqsdf@sqdfsqd.sdf
+[2022-08-19 23:39:41 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:39:41 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:39:44 data validation] (validate.py 40): DEBUG The value passed is: dsqfqsdf
+[2022-08-19 23:39:44 data validation] (validate.py 40): DEBUG The value passed is: dsqfqsdf
+[2022-08-19 23:39:44 data validation] (validate.py 78): INFO The following valid string value has been passed: dsqfqsdf
+[2022-08-19 23:39:44 data validation] (validate.py 78): INFO The following valid string value has been passed: dsqfqsdf
+[2022-08-19 23:44:00 data validation] (validate.py 40): DEBUG The value passed is: dsfdsq@sqdfsqdf.dsf
+[2022-08-19 23:44:00 data validation] (validate.py 40): DEBUG The value passed is: dsfdsq@sqdfsqdf.dsf
+[2022-08-19 23:44:07 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:44:07 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:44:07 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:44:07 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:44:10 data validation] (validate.py 40): DEBUG The value passed is: sqdfsqdfsqdf
+[2022-08-19 23:44:10 data validation] (validate.py 40): DEBUG The value passed is: sqdfsqdfsqdf
+[2022-08-19 23:44:18 data validation] (validate.py 40): DEBUG The value passed is: sdqfsqdfsqdf@sqdfsqdf.df
+[2022-08-19 23:44:18 data validation] (validate.py 40): DEBUG The value passed is: sdqfsqdfsqdf@sqdfsqdf.df
+[2022-08-19 23:44:18 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: sdqfsqdfsqdf@sqdfsqdf.df
+[2022-08-19 23:44:18 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: sdqfsqdfsqdf@sqdfsqdf.df
+[2022-08-19 23:44:18 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:44:18 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:44:22 data validation] (validate.py 40): DEBUG The value passed is: qsfsqdfsqfsqf
+[2022-08-19 23:44:22 data validation] (validate.py 40): DEBUG The value passed is: qsfsqdfsqfsqf
+[2022-08-19 23:44:22 data validation] (validate.py 78): INFO The following valid string value has been passed: qsfsqdfsqfsqf
+[2022-08-19 23:44:22 data validation] (validate.py 78): INFO The following valid string value has been passed: qsfsqdfsqfsqf
+[2022-08-19 23:45:09 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:45:09 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:45:09 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:45:09 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:45:14 data validation] (validate.py 40): DEBUG The value passed is: sqfsqdfsqf@fsdqf.sdf
+[2022-08-19 23:45:14 data validation] (validate.py 40): DEBUG The value passed is: sqfsqdfsqf@fsdqf.sdf
+[2022-08-19 23:45:14 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: sqfsqdfsqf@fsdqf.sdf
+[2022-08-19 23:45:14 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: sqfsqdfsqf@fsdqf.sdf
+[2022-08-19 23:45:14 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:45:14 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:45:16 data validation] (validate.py 40): DEBUG The value passed is: qsdfqsfsqdf
+[2022-08-19 23:45:16 data validation] (validate.py 40): DEBUG The value passed is: qsdfqsfsqdf
+[2022-08-19 23:45:16 data validation] (validate.py 78): INFO The following valid string value has been passed: qsdfqsfsqdf
+[2022-08-19 23:45:16 data validation] (validate.py 78): INFO The following valid string value has been passed: qsdfqsfsqdf
+[2022-08-19 23:51:25 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:51:25 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:51:25 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:51:25 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:51:33 data validation] (validate.py 40): DEBUG The value passed is: fd@sdfs.sdf
+[2022-08-19 23:51:33 data validation] (validate.py 40): DEBUG The value passed is: fd@sdfs.sdf
+[2022-08-19 23:51:33 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: fd@sdfs.sdf
+[2022-08-19 23:51:33 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: fd@sdfs.sdf
+[2022-08-19 23:51:33 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:51:33 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:51:35 data validation] (validate.py 40): DEBUG The value passed is: qsfsqdfsqf
+[2022-08-19 23:51:35 data validation] (validate.py 40): DEBUG The value passed is: qsfsqdfsqf
+[2022-08-19 23:51:35 data validation] (validate.py 78): INFO The following valid string value has been passed: qsfsqdfsqf
+[2022-08-19 23:51:35 data validation] (validate.py 78): INFO The following valid string value has been passed: qsfsqdfsqf
+[2022-08-19 23:53:36 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:53:36 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:53:36 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:53:36 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:53:43 data validation] (validate.py 40): DEBUG The value passed is: sdqfqs@sdqf.qsd
+[2022-08-19 23:53:43 data validation] (validate.py 40): DEBUG The value passed is: sdqfqs@sdqf.qsd
+[2022-08-19 23:53:43 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: sdqfqs@sdqf.qsd
+[2022-08-19 23:53:43 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: sdqfqs@sdqf.qsd
+[2022-08-19 23:53:43 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:53:43 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:53:46 data validation] (validate.py 40): DEBUG The value passed is: sqdfsqdf
+[2022-08-19 23:53:46 data validation] (validate.py 40): DEBUG The value passed is: sqdfsqdf
+[2022-08-19 23:53:46 data validation] (validate.py 78): INFO The following valid string value has been passed: sqdfsqdf
+[2022-08-19 23:53:46 data validation] (validate.py 78): INFO The following valid string value has been passed: sqdfsqdf
+[2022-08-19 23:54:25 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:54:25 data validation] (validate.py 40): DEBUG The value passed is: 1
+[2022-08-19 23:54:25 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:54:25 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:54:30 data validation] (validate.py 40): DEBUG The value passed is: sqdfsqdfs@qqsdqsd.qsd
+[2022-08-19 23:54:30 data validation] (validate.py 40): DEBUG The value passed is: sqdfsqdfs@qqsdqsd.qsd
+[2022-08-19 23:54:30 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: sqdfsqdfs@qqsdqsd.qsd
+[2022-08-19 23:54:30 data validation] (validate.py 120): INFO The following valid e-mail address has been passed: sqdfsqdfs@qqsdqsd.qsd
+[2022-08-19 23:54:30 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:54:30 data validation] (validate.py 40): DEBUG The value passed is: 
+[2022-08-19 23:54:32 data validation] (validate.py 40): DEBUG The value passed is: qsdfsqfsqfsqf
+[2022-08-19 23:54:32 data validation] (validate.py 40): DEBUG The value passed is: qsdfsqfsqfsqf
+[2022-08-19 23:54:32 data validation] (validate.py 78): INFO The following valid string value has been passed: qsdfsqfsqfsqf
+[2022-08-19 23:54:32 data validation] (validate.py 78): INFO The following valid string value has been passed: qsdfsqfsqfsqf

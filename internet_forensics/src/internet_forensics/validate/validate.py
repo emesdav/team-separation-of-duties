@@ -74,7 +74,7 @@ class Validate:
                       the string value if validated; otherwise, it logs an error.
         """
 
-        if isinstance(self.value, str):
+        if isinstance(self.value, str) and self.value != "":
             custom_logger.info(
               f"{'The following valid string value has been passed: '}{self.value}"
             )

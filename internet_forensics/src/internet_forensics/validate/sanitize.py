@@ -33,7 +33,7 @@ class Sanitize:
     def __repr__(self):
         return f"{__class__.__name__}: (value: '{self.value}')"
 
-    def inputString(self):
+    def input_data(self):
         """
 
         """

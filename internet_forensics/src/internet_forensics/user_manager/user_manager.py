@@ -7,11 +7,11 @@ class UserManager:
     def __init__(self, username, password="", firstname="", lastname="", address="", email=""):
         self.username = Sanitize(username).input_data()
         self.password = Sanitize(password).input_data()
-        self.firstname = Sanitize(lastname).input_data()
+        self.firstname = Sanitize(firstname).input_data()
         self.lastname = Sanitize(lastname).input_data()
         self.address = Sanitize(address).input_data()
         self.email = Sanitize(email).input_data()
-        self.user_id = ""
+        self.user_id = 1
 
     def user_login(self):
         # Harsh Password

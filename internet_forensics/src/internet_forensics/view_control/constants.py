@@ -4,7 +4,7 @@ The purpose of this file is to maintain constants used for Main inputs.
 
 TOP_HEADER = \
     "##################################################################\n" \
-    "#                       Dutch Police Portal                      #\n" \
+    "#            Welcome to the Dutch Police Portal                  #\n" \
     "##################################################################"
 
 MAIN_MENU_OPTION_LIST = \
