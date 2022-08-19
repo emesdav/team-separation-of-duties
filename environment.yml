@@ -12,3 +12,4 @@ dependencies:
   - pip:
       - bcrypt==3.2.2
       - safety==2.1.1
+      - -e .
