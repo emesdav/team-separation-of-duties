@@ -1,0 +1,44 @@
+"""
+The purpose of this file is to define the business logic that the CLI entry point executes to create a crime record
+in the DB.
+"""
+
+from src.internet_forensics.cli.constants import INITIAL_NUM_OF_CRIMES
+
+
+# TODO: To change business logic once I know what the schema of the DB is and I have a DB to start querying/consuming.
+def create_crime_record(
+        num_of_repeated_crimes: int,
+        type_of_crime: str,
+        name_of_suspect: str,
+        address_of_suspect: str
+) -> str:
+    """
+    Create a crime record in the DB and return it.
+
+    Args:
+        num_of_repeated_crimes: int
+                                the number of repeated crimes.
+        type_of_crime: str
+                    the type of crime committed.
+        name_of_suspect: str
+                        the name of the suspect.
+        address_of_suspect: str
+                        the address of the suspect.
+
+    Returns:
+            a string with the details of the crime record created and the associated suspect (name and address).
+    """
+
+    if num_of_repeated_crimes == INITIAL_NUM_OF_CRIMES:
+        times = 'once'
+    else:
+        raise ValueError(f"The number of repeated crimes you entered ('{num_of_repeated_crimes}' is incorrect, as it "
+                         f"should be {INITIAL_NUM_OF_CRIMES} initially. Please retry and enter {INITIAL_NUM_OF_CRIMES} "
+                         f"to start creating a new crime record in the database.)")
+
+    response_w_created_crime_record = f"{'Created new record: The crime of type '}{type_of_crime}" \
+                                      f"{' has been committed '}{times}{' and the suspect is named '}" \
+                                      f"{name_of_suspect}{' and lives at the following address: '}{address_of_suspect}"
+
+    return response_w_created_crime_record
