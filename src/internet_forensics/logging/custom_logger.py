@@ -54,7 +54,7 @@ def generate_custom_logger(env: str = environment, output_folder: str = '', name
     # Instantiate initial logger and set logging level based on the type of environment set in the app's config (.yml
     # file).
     if env == 'dev':
-        # In a dev environment, showing/recording only logs whose level is dev or above
+        # In a dev environment, showing/recording only logs whose level is debug or above
         # (info, warning, error, and critical)
         logging_level = logging.DEBUG
     elif env == 'test':
