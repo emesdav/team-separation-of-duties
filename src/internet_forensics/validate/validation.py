@@ -13,7 +13,7 @@ from .constants import (
     NAME_OF_DATA_VAL_LOG
 )
 from ..logging.custom_logger import generate_custom_logger
-from ..utils.multi_threading.multi_thread import threaded
+from ..utilities.multi_threading.multi_thread import threaded
 
 
 custom_logger = generate_custom_logger(name=NAME_OF_DATA_VAL_LOG)
