@@ -66,6 +66,4 @@ class Queries:
             return instance.GDPR_necessary, instance.GDPR_marketing
 
 
-db = Queries()
-db.signup(9012, "clark", "kent", "downtown", "clark.kent@gmail.com", 3847572293, "nicepassword", False, False, False)
 
