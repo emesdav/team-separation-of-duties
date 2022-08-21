@@ -8,7 +8,7 @@ import bcrypt
 
 from src.internet_forensics.encryption.constants import ENCODING_METHOD, FOLDER_NAME_LOG_FILE, NAME_OF_DATA_VAL_LOG
 from ..logging.custom_logger import generate_custom_logger
-from ..utils.multi_threading.multi_thread import threaded
+from ..utilities.multi_threading.multi_thread import threaded
 
 current_wd_path = os.path.abspath(os.getcwd())
 output_dir_log = os.path.join(current_wd_path, FOLDER_NAME_LOG_FILE)

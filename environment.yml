@@ -7,6 +7,7 @@ dependencies:
   - python=3.9.7
   - pytest=6.2.5
   - pytest-cov=3.0.0
+  - pyyaml=6.0.0
   - click=8.0.4
   - sqlite=3.38.5
   - pip=21.2.4
@@ -14,3 +15,8 @@ dependencies:
       - bcrypt==3.2.2
       - safety==2.1.1
       - -e .
+variables:
+  # The environment 'ENV' variable could be either 'dev' (for development), 'test' (for testing), 'uat' (for user
+  # acceptance testing), or 'prod' (for production). Based on this variable, an appropriate level for logging is set,
+  # i.e., 'DEBUG' for 'dev', 'INFO' for 'test', 'WARNING' for 'uat', 'ERROR' for 'prod'.
+  ENV: dev
