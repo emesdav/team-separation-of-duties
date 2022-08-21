@@ -1,6 +1,7 @@
 import db
 from sqlalchemy.orm import sessionmaker
-from internet_forensics.encryption.encrypt import Encrypt
+
+from ..encryption.encrypt import Encrypt
 
 
 # creating session to talk to db
