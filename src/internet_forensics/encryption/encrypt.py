@@ -6,8 +6,9 @@ using Bcrypt library that follows cryptography security standards
 import os
 import bcrypt
 
-from src.internet_forensics.encryption.constants import FOLDER_NAME_LOG_FILE, NAME_OF_DATA_VAL_LOG
+from src.internet_forensics.encryption.constants import ENCODING_METHOD, FOLDER_NAME_LOG_FILE, NAME_OF_DATA_VAL_LOG
 from ..logging.custom_logger import generate_custom_logger
+from ..utils.multi_threading.multi_thread import threaded
 
 current_wd_path = os.path.abspath(os.getcwd())
 output_dir_log = os.path.join(current_wd_path, FOLDER_NAME_LOG_FILE)
@@ -17,39 +18,48 @@ custom_logger = generate_custom_logger(
     output_folder=output_dir_log, name=NAME_OF_DATA_VAL_LOG)
 
 
-class Encrypt():
+class Encrypt:
 
-    def hash_pssw(password: str) -> str:
+    @threaded
+    def hash_password(self, password: str) -> bytes:
         """
-        This method hashes a password passed in string type converting it to byte string
-        then encrypts it with random generated salts and returns a string of the encrypted password
+        Hash a password and convert it to byte string. Then, encrypt it with random-generated salts and return
+        the encrypted password.
 
-        Arg: password string
-        Returns: hashed password
-        """
+        Args:
+            password: str
+                    the password entered by a user.
 
-        # generating a bytestring
-        pssw = password.encode('utf-8')
-
-        # generating hashed password with random salt
-        hashed = bcrypt.hashpw(pssw, bcrypt.gensalt())
-
-        return hashed
-
-    def check_pssw(password: str, hashed_password: str) -> bool:
-        """
-        This method checks if the unhashed password(string type) matches the hashed password coming from DB, 
-        no conversions needed
-        returns true if password matches, returns false if password doesn't match
-
-        Args: User input password, DB's hashed password
-        returns: Bool
+        Returns: bytes
+                the hashed password in the DB.
         """
 
-        # check if the hashed password matches the non-hashed one
-        if bcrypt.checkpw(password, hashed_password):
-            custom_logger.debug("It Matches!")
+        # Generate a bytestring
+        password = password.encode(ENCODING_METHOD)
+
+        # Generate hashed password with random salt
+        hashed_password = bcrypt.hashpw(password, bcrypt.gensalt())
+
+        return hashed_password
+
+    @threaded
+    def check_password(self, password: str, hashed_password: bytes) -> bool:
+        """
+        Check if the un-hashed password matches the hashed password coming from the DB.
+
+        Args:
+            password: str
+                    the password entered by a user.
+            hashed_password: str
+                    the hashed password in the DB.
+
+        Returns: bool
+            True if the password matches the hashed password, False otherwise.
+        """
+
+        if bcrypt.checkpw(password.encode(ENCODING_METHOD), hashed_password):
+            custom_logger.debug(f"The password '{password}' matches the hashed password '{hashed_password}'.")
             return True
         else:
-            custom_logger.debug("It Does not Match :(")
+            custom_logger.debug(f"The password '{password}' does not match the hashed password '{hashed_password}'.")
             return False
