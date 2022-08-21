@@ -5,6 +5,7 @@ source = internet_forensics
 omit =
     src/internet_forensics/utils.py
     src/internet_forensics/logging/custom_logger.py
+    src/internet_forensics/utils/multi_threading/multi_thread.py
     */__init__.py
     */constants.py
 
