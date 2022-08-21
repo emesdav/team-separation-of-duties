@@ -4,6 +4,7 @@ from src.internet_forensics.encryption.encrypt import Encrypt
 
 ENCODING_METHOD = 'utf-8'
 
+# The dummy 'HASHED_PASSWORD' was created by using the method 'hash_password' being tested below for consistency.
 HASHED_PASSWORD = '$2b$12$l0iFR5RTv83oEG4SOk/JNOwMlHSZHWzFa7IhJDWlsH5b6gpO7aHri'
 PASSWORD = 'my_strongest_password'
 
