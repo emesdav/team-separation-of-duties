@@ -43,6 +43,7 @@ class Validate:
     def __repr__(self) -> str:
         return f"{__class__.__name__}: (value: '{self.value}')"
 
+    @threaded
     def validate_integer(self) -> int:
         """
         This function validates if a value were an integer and returns it if so.
