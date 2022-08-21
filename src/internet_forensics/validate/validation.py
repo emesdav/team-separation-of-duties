@@ -1,16 +1,19 @@
 """
-The purpose of this file is to ensure that every input is validated against the expected data type.
+The purpose of this file is to ensure that every input is validated against the expected data type, also
+supporting multi-threading.
 """
 
 from re import fullmatch
 from typing import Union
 
+from src.internet_forensics.constants import STATE_FOR_THREAD
 from .constants import (
     EMAIL_VALID_PATTERN,
     FIRST_SUB_STRING_VAL_LOG_MSG,
     NAME_OF_DATA_VAL_LOG
 )
 from ..logging.custom_logger import generate_custom_logger
+from ..utils.multi_threading.multi_thread import threaded
 
 
 custom_logger = generate_custom_logger(name=NAME_OF_DATA_VAL_LOG)
@@ -53,10 +56,12 @@ class Validate:
             custom_logger.info(
               f"{'The following valid integer value has been passed: '}{self.value}"
             )
-            return self.value
+            if self.value._state == STATE_FOR_THREAD:
+                return self.value._result
         else:
             raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'integer: '}{self.value}")
 
+    @threaded
     def validate_string(self) -> str:
         """
         This function validates if a value were a string and returns it if so.
@@ -70,10 +75,12 @@ class Validate:
             custom_logger.info(
               f"{'The following valid string value has been passed: '}{self.value}"
             )
-            return self.value
+            if self.value._state == STATE_FOR_THREAD:
+                return self.value._result
         else:
             raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'string: '}{self.value}")
 
+    @threaded
     def validate_float(self) -> float:
         """
         This function validates if a value were a float and returns it if so.
@@ -87,10 +94,12 @@ class Validate:
             custom_logger.info(
               f"{'The following valid float value has been passed: '}{self.value}"
             )
-            return self.value
+            if self.value._state == STATE_FOR_THREAD:
+                return self.value._result
         else:
             raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'float: '}{self.value}")
 
+    @threaded
     def validate_email(self) -> str:
         """
         This function validates if a value were a valid e-mail address based on a RegEx pattern defined in the constant
@@ -103,10 +112,13 @@ class Validate:
 
         # Enforce to return False as 'fullmatch' returns None.
         is_email_valid = False if fullmatch(EMAIL_VALID_PATTERN, self.value) is None else self.value
+
         if not is_email_valid:
             raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'e-mail address: '}{self.value}")
         else:
             custom_logger.info(
               f"{'The following valid e-mail address has been passed: '}{self.value}"
             )
-        return is_email_valid
+
+        if is_email_valid._state == STATE_FOR_THREAD:
+            return is_email_valid._result
