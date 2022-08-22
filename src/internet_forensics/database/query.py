@@ -3,6 +3,7 @@ from db import Users as users, engine
 from sqlalchemy.orm import sessionmaker
 from src.internet_forensics.encryption.encrypt import Encrypt
 from ..logging.custom_logger import generate_custom_logger
+import uuid
 
 custom_logger = generate_custom_logger("DB queries")
 
@@ -28,13 +29,30 @@ class Queries:
         for instance in session.query(users).filter(users.user_id == user_id).first():
             return instance
 
-    def signup(self, user_id: int, first_name: str, last_name: str, address: str, email: str, mobile: int,
+    def password_reset(self, user_id: int, old_password, new_password):
+        """
+        this method checks for the old password and if correct replaces it with new password after hashing it
+        Args:
+            user_id: int
+            old_password: string
+            new_password: string
+
+        Returns:
+
+        """
+        new_hashed_password = Encrypt().hash_password(new_password)
+        for instance in session.query(users).filter(users.user_id == user_id).first():
+            if Encrypt.check_password(old_password, instance.password):
+                instance.password = new_hashed_password
+
+
+    def signup(self, first_name: str, last_name: str, address: str, email: str, mobile: int,
                password: str, privacy: bool, GDPR_necessary: bool, GDPR_marketing: bool) -> int:
         """
         This method lets a user signup inserting all their information and returns the id to the program
         """
 
-
+        user_id = str(uuid.uuid4())
         pssw = Encrypt().hash_password(password)
 
         user = users(user_id, first_name, last_name, address, email, mobile,
