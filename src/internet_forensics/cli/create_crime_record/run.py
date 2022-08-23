@@ -4,9 +4,14 @@ in the DB.
 """
 
 from src.internet_forensics.cli.constants import INITIAL_NUM_OF_CRIMES
+from src.internet_forensics.cli.utils import CrimeRecords, get_db_session_obj
+from src.internet_forensics.logging.custom_logger import generate_custom_logger
+
+custom_logger = generate_custom_logger(name="Create crime record in the DB")
+
+session_obj = get_db_session_obj()
 
 
-# TODO: To change business logic once I know what the schema of the DB is and I have a DB to start querying/consuming.
 def create_crime_record(
         num_of_repeated_crimes: int,
         type_of_crime: str,
@@ -40,5 +45,14 @@ def create_crime_record(
     response_w_created_crime_record = f"{'Created new record: The crime of type '}{type_of_crime}" \
                                       f"{' has been committed '}{times}{' and the suspect is named '}" \
                                       f"{name_of_suspect}{' and lives at the following address: '}{address_of_suspect}"
+
+    crime_record_to_add = CrimeRecords(num_of_repeated_crimes, type_of_crime, name_of_suspect, address_of_suspect)
+
+    # Insert the crime record into the DB
+    try:
+        session_obj.add(crime_record_to_add)
+        session_obj.commit()
+    except Exception as e:
+        custom_logger.error(e)
 
     return response_w_created_crime_record

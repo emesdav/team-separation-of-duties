@@ -9,8 +9,6 @@ from src.internet_forensics.cli.constants import INITIAL_NUM_OF_CRIMES
 import run
 
 
-# TODO: To change click options/CLI arguments once I know what the schema of the DB is and I have a DB to start
-#  querying/consuming.
 @click.command()
 @click.option('--num_of_repeated_crimes',
               default=INITIAL_NUM_OF_CRIMES,
