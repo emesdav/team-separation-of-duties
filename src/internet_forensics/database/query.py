@@ -1,11 +1,11 @@
 
-from db import Users as users, engine
+from db import Users as users, engine, Privacy, PersonalData as pers
 from sqlalchemy.orm import sessionmaker
 from src.internet_forensics.encryption.encrypt import Encrypt
 from ..logging.custom_logger import generate_custom_logger
 import uuid
 
-custom_logger = generate_custom_logger("DB queries")
+custom_logger = generate_custom_logger(name="DB queries")
 
 # creating session to talk to db
 Session = sessionmaker(bind=engine)
@@ -55,11 +55,17 @@ class Queries:
         user_id = str(uuid.uuid4())
         pssw = Encrypt().hash_password(password)
 
-        user = users(user_id, first_name, last_name, address, email, mobile,
-                        pssw, privacy, GDPR_necessary, GDPR_marketing)
+        # user table record
+        user = users(user_id, email, pssw)
+        # privacy table record
+        privacy_rec = Privacy(user_id, privacy, GDPR_necessary, GDPR_marketing)
+        # creating personal data table record
+        pdata = pers(user_id, first_name, last_name, address, mobile)
 
         try:
             session.add(user)
+            session.add(privacy_rec)
+            session.add(pdata)
             session.commit()
         except Exception as ex:
             custom_logger.info(ex)

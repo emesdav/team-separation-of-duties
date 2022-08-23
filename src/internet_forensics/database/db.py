@@ -19,34 +19,51 @@ class Users(base):
     GDPR privacy follows the same reasoning but is divided in two levels, marketing and necessary
     '''
     user_id = Column(Integer, primary_key=True)
-    first_name = Column(String)
-    last_name = Column(String)
-    address = Column(String)
     email = Column(String)
-    mobile = Column(Integer)
     password = Column(String)
+
+    def __init__(self, user_id, email, password):
+
+        self.user_id = user_id
+        self.email = email
+        self.password = password
+
+
+class Privacy(base):
+
+    __tablename__ = 'privacy'
+
+    user_id = Column(Integer, primary_key=True)
     privacy = Column(Boolean)
     GDPR_necessary = Column(Boolean)
     GDPR_marketing = Column(Boolean)
 
-    def __init__(self, user_id, first_name, last_name, address, email, mobile,
-                 password, privacy, GDPR_necessary, GDPR_marketing):
-
+    def __init__(self, user_id, privacy, GDPR_necessary, GDPR_marketing):
         self.user_id = user_id
-        self.first_name = first_name
-        self.last_name = last_name
-        self.address = address
-        self.email = email
-        self.mobile = mobile
-        self.password = password
         self.privacy = privacy
         self.GDPR_necessary = GDPR_necessary
         self.GDPR_marketing = GDPR_marketing
 
+class PersonalData(base):
+
+    __tablename__ = 'personalData'
+
+    user_id = Column(Integer, primary_key=True)
+    first_name = Column(String)
+    last_name = Column(String)
+    address = Column(String)
+    mobile = Column(Integer)
+
+    def __init__(self, user_id, first_name, last_name, address, mobile):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.address = address
+        self.mobile = mobile
+
 
 class CrimeRecords(base):
 
-    __tablename__ = 'CrimeRecords'
+    __tablename__ = 'crimeRecords'
 
     name_of_suspect = Column(String, primary_key=True)
     num_of_repeated_crimes = Column(Integer)
