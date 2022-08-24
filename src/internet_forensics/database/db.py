@@ -18,21 +18,21 @@ class Users(base):
     False if not agreed, True if agreed
     GDPR privacy follows the same reasoning but is divided in two levels, marketing and necessary
     '''
-    user_id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, primary_key=True, unique=True, autoincrement=True, nullable=False)
     first_name = Column(String)
     last_name = Column(String)
     address = Column(String)
-    email = Column(String)
+    email = Column(String, unique=True)
     mobile = Column(Integer)
     password = Column(String)
     privacy = Column(Boolean)
-    GDPR_necessary = Column(Boolean)
-    GDPR_marketing = Column(Boolean)
+    gdpr_necessary = Column(Boolean)
+    gdpr_marketing = Column(Boolean)
 
-    def __init__(self, user_id, first_name, last_name, address, email, mobile,
-                 password, privacy, GDPR_necessary, GDPR_marketing):
+    def __init__(self, first_name, last_name, address, email, mobile,
+                 password, privacy, gdpr_necessary, gdpr_marketing):
 
-        self.user_id = user_id
+        #self.user_id = user_id
         self.first_name = first_name
         self.last_name = last_name
         self.address = address
@@ -40,8 +40,8 @@ class Users(base):
         self.mobile = mobile
         self.password = password
         self.privacy = privacy
-        self.GDPR_necessary = GDPR_necessary
-        self.GDPR_marketing = GDPR_marketing
+        self.gdpr_necessary = gdpr_necessary
+        self.gdpr_marketing = gdpr_marketing
 
 
 class CrimeRecords(base):

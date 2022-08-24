@@ -9,3 +9,6 @@
 *.pyc
 
 */.DS_Store
+
+*/.app_log/
+*.log
