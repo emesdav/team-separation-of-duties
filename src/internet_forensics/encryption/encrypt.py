@@ -20,7 +20,7 @@ custom_logger = generate_custom_logger(
 
 class Encrypt:
 
-    @threaded
+    # @threaded
     def hash_password(self, password: str) -> bytes:
         """
         Hash a password and convert it to byte string. Then, encrypt it with random-generated salts and return
@@ -42,7 +42,7 @@ class Encrypt:
 
         return hashed_password
 
-    @threaded
+    # @threaded
     def check_password(self, password: str, hashed_password: bytes) -> bool:
         """
         Check if the un-hashed password matches the hashed password coming from the DB.
