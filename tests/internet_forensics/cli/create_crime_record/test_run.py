@@ -3,7 +3,7 @@ import unittest
 from src.internet_forensics.cli.create_crime_record.run import create_crime_record
 
 
-class TestValidation(unittest.TestCase):
+class TestCreateCrimeRecord(unittest.TestCase):
 
     def test_create_crime_record(self):
         num_of_repeated_crimes = 1

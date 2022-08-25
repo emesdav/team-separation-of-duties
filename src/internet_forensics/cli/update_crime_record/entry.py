@@ -6,24 +6,26 @@ import click
 
 from src.internet_forensics.cli.constants import INITIAL_NUM_OF_CRIMES
 
-import run
+from .run import update_crime_record
 
 
-# TODO: To change click options/CLI arguments once I know what the schema of the DB is and I have a DB to start
-#  querying/consuming.
 @click.command()
 @click.option('--num_of_repeated_crimes',
-              required=False,
+              required=True,
+              prompt='Enter the number of repeated crime committed',
               type=click.IntRange(INITIAL_NUM_OF_CRIMES, float("inf")),
               help='Number of repeated crimes of the same type.')
 @click.option('--type_of_crime',
-              required=False,
+              required=True,
+              prompt='Enter the type of crime committed',
               help='The type of crime committed.')
 @click.option('--name_of_suspect',
-              required=False,
+              required=True,
+              prompt='Enter the name of the suspect',
               help='The name of the suspect.')
 @click.option('--address_of_suspect',
-              required=False,
+              required=True,
+              prompt='Enter the address of the suspect',
               help='The address of the suspect.')
 def update_crime_record(
         num_of_repeated_crimes: int,
@@ -33,4 +35,8 @@ def update_crime_record(
 ) -> None:
     """Entry point to update a crime record in the DB."""
 
-    click.echo(run.update_crime_record(num_of_repeated_crimes, type_of_crime, name_of_suspect, address_of_suspect))
+    click.echo(update_crime_record(num_of_repeated_crimes, type_of_crime, name_of_suspect, address_of_suspect))
+
+
+if __name__ == '__main__':
+    update_crime_record()
