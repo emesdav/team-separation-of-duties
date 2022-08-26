@@ -6,7 +6,7 @@ import click
 
 from src.internet_forensics.cli.constants import INITIAL_NUM_OF_CRIMES
 
-from .run import create_crime_record
+from .run import create_crime_record_run
 
 
 @click.command()
@@ -36,7 +36,7 @@ def create_crime_record(
 ) -> None:
     """Entry point to create a crime record in the DB."""
 
-    click.echo(create_crime_record(num_of_repeated_crimes, type_of_crime, name_of_suspect, address_of_suspect))
+    click.echo(create_crime_record_run(num_of_repeated_crimes, type_of_crime, name_of_suspect, address_of_suspect))
 
 
 if __name__ == '__main__':

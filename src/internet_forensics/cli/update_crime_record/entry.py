@@ -6,7 +6,7 @@ import click
 
 from src.internet_forensics.cli.constants import INITIAL_NUM_OF_CRIMES
 
-from .run import update_crime_record
+from .run import update_crime_record_run
 
 
 @click.command()
@@ -35,7 +35,9 @@ def update_crime_record(
 ) -> None:
     """Entry point to update a crime record in the DB."""
 
-    click.echo(update_crime_record(num_of_repeated_crimes, type_of_crime, name_of_suspect, address_of_suspect))
+    click.echo(
+        f"{'Updated crime record: '}{update_crime_record_run(num_of_repeated_crimes, type_of_crime, name_of_suspect, address_of_suspect)}"
+    )
 
 
 if __name__ == '__main__':

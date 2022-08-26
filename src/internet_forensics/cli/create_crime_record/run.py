@@ -12,7 +12,7 @@ custom_logger = generate_custom_logger(name="Create crime record in the DB")
 session_obj = get_db_session_obj()
 
 
-def create_crime_record(
+def create_crime_record_run(
         num_of_repeated_crimes: int,
         type_of_crime: str,
         name_of_suspect: str,

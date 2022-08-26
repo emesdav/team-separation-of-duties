@@ -3,8 +3,7 @@ The purpose of this file is to define the business logic that the CLI entry poin
 in the DB.
 """
 
-from src.internet_forensics.cli.constants import INITIAL_NUM_OF_CRIMES
-from src.internet_forensics.cli.utils import CrimeRecords, get_db_session_obj
+from src.internet_forensics.cli.utils import CrimeRecords, get_db_session_obj, get_num_repeat_crimes_and_descr
 from src.internet_forensics.logging.custom_logger import generate_custom_logger
 
 update_crime_record_logger = generate_custom_logger(name="Update crime record in the DB")
@@ -12,7 +11,7 @@ update_crime_record_logger = generate_custom_logger(name="Update crime record in
 session_obj = get_db_session_obj()
 
 
-def update_crime_record(
+def update_crime_record_run(
         num_of_repeated_crimes: int,
         type_of_crime: str,
         name_of_suspect: str,
@@ -40,23 +39,9 @@ def update_crime_record(
         raise ValueError('None of the details to update were provided. Please enter at least one detail to update and '
                          'retry.')
 
-    time_once = 'once'
-    times_twice = 'twice'
-    # If a crime were committed more than twice.
-    times_three_or_more = f"{num_of_repeated_crimes}{' times'}"
+    crime_record = CrimeRecords(num_of_repeated_crimes, type_of_crime, name_of_suspect, address_of_suspect)
 
-    if num_of_repeated_crimes == INITIAL_NUM_OF_CRIMES:
-        times = time_once
-    elif num_of_repeated_crimes == 2:
-        times = times_twice
-    else:
-        # Given the usage of 'click.IntRange' in the click option/CLI argument 'num_of_repeated_crimes',
-        # this case can only occur if the number of repeated crimes were greater than 2.
-        times = times_three_or_more
-
-    response_w_updated_crime_record = f"{'Updated existing record: The crime of type '}{type_of_crime}" \
-                                      f"{' has been committed '}{times}{' and the suspect is named '}" \
-                                      f"{name_of_suspect}{' and lives at the following address: '}{address_of_suspect}"
+    times, response_w_updated_crime_record = get_num_repeat_crimes_and_descr(crime_record)
 
     # Update the crime record into the DB based on the name of the suspect
     try:

@@ -4,7 +4,6 @@ source = internet_forensics
 [report]
 omit =
     src/internet_forensics/utils.py
-    src/internet_forensics/cli/utils.py
     src/internet_forensics/cli/create_crime_record/entry.py
     src/internet_forensics/logging/custom_logger.py
     src/internet_forensics/utils/multi_threading/multi_thread.py
