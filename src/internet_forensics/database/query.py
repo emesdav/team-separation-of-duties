@@ -98,4 +98,3 @@ class Queries:
             return True
         else:
             return False
-

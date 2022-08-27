@@ -80,13 +80,16 @@ def generate_custom_logger(
     # Add console handler.
     handler_console = logging.StreamHandler(sys.stdout)
     handler_console.setLevel(logging_level)
-    handler_console.setFormatter(logging.Formatter(fmt=format_log, datefmt=DATE_TIME_FMT))
+    handler_console.setFormatter(logging.Formatter(
+        fmt=format_log, datefmt=DATE_TIME_FMT))
     custom_logger.addHandler(handler_console)
 
     # Add file handler.
-    handler_file = logging.FileHandler(os.path.join(output_folder, LOG_FILE_NAME_W_EXT))
+    handler_file = logging.FileHandler(
+        os.path.join(output_folder, LOG_FILE_NAME_W_EXT))
     handler_file.setLevel(logging_level)
-    handler_file.setFormatter(logging.Formatter(fmt=format_log, datefmt=DATE_TIME_FMT))
+    handler_file.setFormatter(logging.Formatter(
+        fmt=format_log, datefmt=DATE_TIME_FMT))
     custom_logger.addHandler(handler_file)
 
     return custom_logger

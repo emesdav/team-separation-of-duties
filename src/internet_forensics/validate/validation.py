@@ -32,7 +32,8 @@ class Validate:
             self.value = value
             custom_logger.debug(f"{'The value passed is: '}{self.value}")
         else:
-            raise ValueError("No value has been provided. Please add a value correctly.")
+            raise ValueError(
+                "No value has been provided. Please add a value correctly.")
 
     def __str__(self) -> str:
         return f"<{__class__.__name__} having the input value '{self.value}' to validate>"
@@ -52,12 +53,13 @@ class Validate:
 
         if isinstance(self.value, int):
             custom_logger.info(
-              f"{'The following valid integer value has been passed: '}{self.value}"
+                f"{'The following valid integer value has been passed: '}{self.value}"
             )
             if self.value._state == STATE_FOR_THREAD:
                 return self.value._result
         else:
-            raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'integer: '}{self.value}")
+            raise ValueError(
+                f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'integer: '}{self.value}")
 
     @threaded
     def validate_string(self) -> str:
@@ -71,12 +73,13 @@ class Validate:
 
         if isinstance(self.value, str):
             custom_logger.info(
-              f"{'The following valid string value has been passed: '}{self.value}"
+                f"{'The following valid string value has been passed: '}{self.value}"
             )
             if self.value._state == STATE_FOR_THREAD:
                 return self.value._result
         else:
-            raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'string: '}{self.value}")
+            raise ValueError(
+                f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'string: '}{self.value}")
 
     @threaded
     def validate_float(self) -> float:
@@ -90,12 +93,13 @@ class Validate:
 
         if isinstance(self.value, float):
             custom_logger.info(
-              f"{'The following valid float value has been passed: '}{self.value}"
+                f"{'The following valid float value has been passed: '}{self.value}"
             )
             if self.value._state == STATE_FOR_THREAD:
                 return self.value._result
         else:
-            raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'float: '}{self.value}")
+            raise ValueError(
+                f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'float: '}{self.value}")
 
     @threaded
     def validate_email(self) -> str:
@@ -109,13 +113,15 @@ class Validate:
         """
 
         # Enforce to return False as 'fullmatch' returns None.
-        is_email_valid = False if fullmatch(EMAIL_VALID_PATTERN, self.value) is None else self.value
+        is_email_valid = False if fullmatch(
+            EMAIL_VALID_PATTERN, self.value) is None else self.value
 
         if not is_email_valid:
-            raise ValueError(f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'e-mail address: '}{self.value}")
+            raise ValueError(
+                f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'e-mail address: '}{self.value}")
         else:
             custom_logger.info(
-              f"{'The following valid e-mail address has been passed: '}{self.value}"
+                f"{'The following valid e-mail address has been passed: '}{self.value}"
             )
 
         if is_email_valid._state == STATE_FOR_THREAD:

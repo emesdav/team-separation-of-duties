@@ -23,7 +23,8 @@ class TestEncrypt(unittest.TestCase):
 
         if result_hashed_password._state == STATE_FOR_THREAD:
 
-            self.assertEqual(expected_hashed_password, result_hashed_password._result)
+            self.assertEqual(expected_hashed_password,
+                             result_hashed_password._result)
 
     # The password matches the hashed password (positive test case).
     def test_check_password_matched(self):
@@ -32,13 +33,16 @@ class TestEncrypt(unittest.TestCase):
         result_matched_hashed_password = encrypt_obj.hash_password(PASSWORD)
 
         if result_matched_hashed_password._state == STATE_FOR_THREAD:
-            self.assertEqual(expected_matched_password, result_matched_hashed_password._result)
+            self.assertEqual(expected_matched_password,
+                             result_matched_hashed_password._result)
 
     # The password does not match the hashed password (negative test case).
     def test_check_password_mismatched(self):
 
-        expected_mismatched_password = '$3c$12$l0iFR5RTv83oEG4SOk/JNOwMlHSZHWzFa7IhJDWlsH5b6gpO7aHri'.encode(ENCODING_METHOD)
+        expected_mismatched_password = '$3c$12$l0iFR5RTv83oEG4SOk/JNOwMlHSZHWzFa7IhJDWlsH5b6gpO7aHri'.encode(
+            ENCODING_METHOD)
         result_mismatched_hashed_password = encrypt_obj.hash_password(PASSWORD)
 
         if result_mismatched_hashed_password._state == STATE_FOR_THREAD:
-            self.assertEqual(expected_mismatched_password, result_mismatched_hashed_password._result)
+            self.assertEqual(expected_mismatched_password,
+                             result_mismatched_hashed_password._result)

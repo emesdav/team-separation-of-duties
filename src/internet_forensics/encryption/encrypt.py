@@ -62,8 +62,10 @@ class Encrypt:
         """
 
         if bcrypt.checkpw(password.encode(ENCODING_METHOD), hashed_password):
-            custom_logger.debug(f"The password '{password}' matches the hashed password '{hashed_password}'.")
+            custom_logger.debug(
+                f"The password '{password}' matches the hashed password '{hashed_password}'.")
             return True
         else:
-            custom_logger.debug(f"The password '{password}' does not match the hashed password '{hashed_password}'.")
+            custom_logger.debug(
+                f"The password '{password}' does not match the hashed password '{hashed_password}'.")
             return False

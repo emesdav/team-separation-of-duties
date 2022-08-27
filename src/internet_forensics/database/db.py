@@ -17,7 +17,8 @@ class Users(base):
     False if not agreed, True if agreed
     GDPR privacy follows the same reasoning but is divided in two levels, marketing and necessary
     '''
-    user_id = Column(Integer, primary_key=True, unique=True, autoincrement=True, nullable=False)
+    user_id = Column(Integer, primary_key=True, unique=True,
+                     autoincrement=True, nullable=False)
     first_name = Column(String)
     last_name = Column(String)
     address = Column(String)
