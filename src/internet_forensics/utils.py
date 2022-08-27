@@ -1,5 +1,6 @@
 """
-The purpose of this file is to maintain utility-based functions used throughout the application.
+The purpose of this file is to maintain utility-based functions used
+throughout the application.
 """
 
 from pathlib import Path

@@ -27,7 +27,8 @@ class Encrypt:
     @threaded
     def hash_password(self, password: str) -> bytes:
         """
-        Hash a password and convert it to byte string. Then, encrypt it with random-generated salts and return
+        Hash a password and convert it to byte string.
+        Then, encrypt it with random-generated salts and return
         the encrypted password.
 
         Args:
@@ -49,7 +50,8 @@ class Encrypt:
     @threaded
     def check_password(self, password: str, hashed_password: bytes) -> bool:
         """
-        Check if the un-hashed password matches the hashed password coming from the DB.
+        Check if the un-hashed password matches the hashed password
+        coming from the DB.
 
         Args:
             password: str
@@ -58,14 +60,17 @@ class Encrypt:
                     the hashed password in the DB.
 
         Returns: bool
-            True if the password matches the hashed password, False otherwise.
+            True if the password matches the hashed password,
+            False otherwise.
         """
 
         if bcrypt.checkpw(password.encode(ENCODING_METHOD), hashed_password):
             custom_logger.debug(
-                f"The password '{password}' matches the hashed password '{hashed_password}'.")
+                f"The password '{password}' matches the hashed password "
+                f"'{hashed_password}'.")
             return True
-        else:
-            custom_logger.debug(
-                f"The password '{password}' does not match the hashed password '{hashed_password}'.")
-            return False
+
+        custom_logger.debug(
+            f"The password '{password}' does not match the hashed "
+            f"password '{hashed_password}'.")
+        return False

@@ -1,6 +1,8 @@
 """
-The purpose of this file is to create a global custom logger to leverage in all files of the application
-to build an auditable and detailed trace of all operations performed and/or warnings/errors occurred throughout it.
+The purpose of this file is to create a global custom logger
+to leverage in all files of the application
+to build an auditable and detailed trace of all operations
+performed and/or warnings/errors occurred throughout it.
 """
 
 import logging
@@ -34,12 +36,15 @@ def generate_custom_logger(
         name: str = EMPTY_STRING
 ) -> logging.Logger:
     """
-    This function creates a custom logger with the required level of logging and formatting.
+    This function creates a custom logger with the required
+    level of logging and formatting.
 
     Args:
         env: string
-            the type of environment used to consume the application, e.g., 'dev' (by default in the environment.yml
-            file), 'test', 'uat' (user acceptance testing), or 'prod' (production).
+            the type of environment used to consume the
+            application, e.g., 'dev' (by default in the environment.yml
+            file), 'test', 'uat' (user acceptance testing),
+            or 'prod' (production).
         output_folder: string
                     the output folder to save the log file into.
         name: string
@@ -52,28 +57,34 @@ def generate_custom_logger(
 
     custom_logger = logging.getLogger(name)
 
-    # Instantiate initial logger and set logging level based on the type of environment set in the app's config (.yml
+    # Instantiate initial logger and set logging level based on
+    # the type of environment set in the app's config (.yml
     # file).
     if env == 'dev':
-        # In a dev environment, showing/recording only logs whose level is debug or above
+        # In a dev environment, showing/recording only logs
+        # whose level is debug or above
         # (info, warning, error, and critical)
         logging_level = logging.DEBUG
     elif env == 'test':
-        # In a test environment, showing/recording only logs whose level is info or above
+        # In a test environment, showing/recording only logs
+        # whose level is info or above
         # (warning, error, and critical)
         logging_level = logging.INFO
     elif env == 'uat':
-        # In a user acceptance testing (UAT) environment, showing/recording only logs whose level is warning or above
+        # In a user acceptance testing (UAT) environment,
+        # showing/recording only logs whose level is warning or above
         # (error and critical)
         logging_level = logging.WARNING
     elif env == 'prod':
-        # In a production environment, showing/recording only logs whose level is error or above (critical)
+        # In a production environment, showing/recording only
+        # logs whose level is error or above (critical)
         logging_level = logging.ERROR
 
     custom_logger.setLevel(logging_level)
     custom_logger.propagate = False
 
-    # Set formatter to be as detailed as per the constant 'FORMAT_OF_LOG_MSG' (see constants.py for further details
+    # Set formatter to be as detailed as per the constant
+    # 'FORMAT_OF_LOG_MSG' (see constants.py for further details
     # on this).
     format_log = FORMAT_OF_LOG_MSG
 

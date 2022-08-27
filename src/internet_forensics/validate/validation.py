@@ -1,5 +1,6 @@
 """
-The purpose of this file is to ensure that every input is validated against the expected data type, also
+The purpose of this file is to ensure that every input
+is validated against the expected data type, also
 supporting multi-threading.
 """
 
@@ -18,7 +19,8 @@ custom_logger = generate_custom_logger(name=NAME_OF_DATA_VAL_LOG)
 
 class Validate:
     """
-    This class validates if a value were either an integer, a float, a string, or a valid e-mail address, and
+    This class validates if a value were either an integer,
+    a float, a string, or a valid e-mail address, and
     returns it via the relevant method if so.
     """
 
@@ -36,7 +38,8 @@ class Validate:
                 "No value has been provided. Please add a value correctly.")
 
     def __str__(self) -> str:
-        return f"<{__class__.__name__} having the input value '{self.value}' to validate>"
+        return f"<{__class__.__name__} having the " \
+               f"input value '{self.value}' to validate>"
 
     def __repr__(self) -> str:
         return f"{__class__.__name__}: (value: '{self.value}')"
@@ -44,17 +47,20 @@ class Validate:
     @threaded
     def validate_integer(self) -> int:
         """
-        This function validates if a value were an integer and returns it if so.
+        This function validates if a value were an integer
+        and returns it if so.
 
         Returns:
             self.value: int
-                      the integer value if validated; otherwise, it logs an error.
+                      the integer value if validated;
+                      otherwise, it logs an error.
         """
 
         if isinstance(self.value, int):
-            custom_logger.info(
-                f"{'The following valid integer value has been passed: '}{self.value}"
-            )
+            custom_logger.info(f""
+                               f"{'The following valid integer'}"
+                               f"{'value has been passed: '}"
+                               f"{self.value}")
             if self.value._state == STATE_FOR_THREAD:
                 return self.value._result
         else:
@@ -68,12 +74,15 @@ class Validate:
 
         Returns:
             self.value: str
-                      the string value if validated; otherwise, it logs an error.
+                      the string value if validated;
+                      otherwise, it logs an error.
         """
 
         if isinstance(self.value, str):
             custom_logger.info(
-                f"{'The following valid string value has been passed: '}{self.value}"
+                f""
+                f"{'The following valid string value has been passed: '}"
+                f"{self.value}"
             )
             if self.value._state == STATE_FOR_THREAD:
                 return self.value._result
@@ -88,12 +97,15 @@ class Validate:
 
         Returns:
             self.value: float
-                      the float value if validated; otherwise, it logs an error.
+                      the float value if validated; otherwise,
+                      it logs an error.
         """
 
         if isinstance(self.value, float):
             custom_logger.info(
-                f"{'The following valid float value has been passed: '}{self.value}"
+                f""
+                f"{'The following valid float value has been passed: '}"
+                f"{self.value}"
             )
             if self.value._state == STATE_FOR_THREAD:
                 return self.value._result
@@ -104,12 +116,14 @@ class Validate:
     @threaded
     def validate_email(self) -> str:
         """
-        This function validates if a value were a valid e-mail address based on a RegEx pattern defined in the constant
+        This function validates if a value were a valid e-mail
+        address based on a RegEx pattern defined in the constant
         EMAIL_VALID_PATTERN and returns it if so.
 
         Returns:
             self.value: str
-                      the string value with a valid e-mail address if validated; otherwise, it logs an error.
+                      the string value with a valid e-mail address
+                      if validated; otherwise, it logs an error.
         """
 
         # Enforce to return False as 'fullmatch' returns None.
@@ -118,10 +132,13 @@ class Validate:
 
         if not is_email_valid:
             raise ValueError(
-                f"{FIRST_SUB_STRING_VAL_LOG_MSG}{'e-mail address: '}{self.value}")
+                f"{FIRST_SUB_STRING_VAL_LOG_MSG}"
+                f"{'e-mail address: '}{self.value}")
         else:
             custom_logger.info(
-                f"{'The following valid e-mail address has been passed: '}{self.value}"
+                f""
+                f"{'The following valid e-mail address has been passed: '}"
+                f"{self.value}"
             )
 
         if is_email_valid._state == STATE_FOR_THREAD:
