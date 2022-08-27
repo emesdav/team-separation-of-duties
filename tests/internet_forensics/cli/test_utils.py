@@ -1,6 +1,7 @@
 import unittest
 
-from src.internet_forensics.cli.utils import CrimeRecords, get_num_repeat_crimes_and_descr
+from src.internet_forensics.database.db import CrimeRecords
+from src.internet_forensics.cli.utils import get_num_repeat_crimes_and_descr
 
 num_of_repeated_crimes = 1
 num_times = 'once'

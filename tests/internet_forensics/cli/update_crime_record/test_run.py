@@ -1,6 +1,6 @@
 import unittest
 
-from src.internet_forensics.cli.update_crime_record.run import update_crime_record
+from src.internet_forensics.cli.update_crime_record.run import update_crime_record_run
 
 
 class TestUpdateCrimeRecord(unittest.TestCase):
@@ -14,7 +14,7 @@ class TestUpdateCrimeRecord(unittest.TestCase):
         expected_response_from_update = f"Updated existing record: The crime of type {type_of_crime} has been " \
                                         f"committed once and the suspect is named {name_of_suspect} and " \
                                         f"lives at the following address: {address_of_suspect}"
-        result_response_from_update = update_crime_record(
+        result_response_from_update = update_crime_record_run(
             num_of_repeated_crimes, type_of_crime, name_of_suspect, address_of_suspect
         )
 
