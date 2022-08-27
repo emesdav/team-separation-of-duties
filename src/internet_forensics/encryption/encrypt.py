@@ -1,12 +1,16 @@
 """
-This file's purpose is to provide encryption features to all the system
-using Bcrypt library that follows cryptography security standards
+This file's purpose is to provide encryption features to the system
+using the 'bcrypt' library that adheres to cryptography security standards.
 """
 
 import os
+
 import bcrypt
 
-from src.internet_forensics.encryption.constants import ENCODING_METHOD, FOLDER_NAME_LOG_FILE, NAME_OF_DATA_VAL_LOG
+from src.internet_forensics.encryption.constants import (ENCODING_METHOD,
+                                                         FOLDER_NAME_LOG_FILE,
+                                                         NAME_OF_DATA_VAL_LOG)
+
 from ..logging.custom_logger import generate_custom_logger
 from ..utilities.multi_threading.multi_thread import threaded
 
@@ -20,7 +24,7 @@ custom_logger = generate_custom_logger(
 
 class Encrypt:
 
-    # @threaded
+    @threaded
     def hash_password(self, password: str) -> bytes:
         """
         Hash a password and convert it to byte string. Then, encrypt it with random-generated salts and return
@@ -42,7 +46,7 @@ class Encrypt:
 
         return hashed_password
 
-    # @threaded
+    @threaded
     def check_password(self, password: str, hashed_password: bytes) -> bool:
         """
         Check if the un-hashed password matches the hashed password coming from the DB.

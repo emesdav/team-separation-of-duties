@@ -7,14 +7,11 @@ from re import fullmatch
 from typing import Union
 
 from src.internet_forensics.constants import STATE_FOR_THREAD
-from .constants import (
-    EMAIL_VALID_PATTERN,
-    FIRST_SUB_STRING_VAL_LOG_MSG,
-    NAME_OF_DATA_VAL_LOG
-)
+
 from ..logging.custom_logger import generate_custom_logger
 from ..utilities.multi_threading.multi_thread import threaded
-
+from .constants import (EMAIL_VALID_PATTERN, FIRST_SUB_STRING_VAL_LOG_MSG,
+                        NAME_OF_DATA_VAL_LOG)
 
 custom_logger = generate_custom_logger(name=NAME_OF_DATA_VAL_LOG)
 

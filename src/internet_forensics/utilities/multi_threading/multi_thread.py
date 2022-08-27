@@ -4,8 +4,8 @@ concurrent requests or execution of operations by at least two users at the same
 of this application.
 """
 
-from threading import Thread
 from concurrent.futures import Future
+from threading import Thread
 
 
 def fn_w_future_obj(fn, future: Future, args, kwargs) -> None:

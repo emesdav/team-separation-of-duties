@@ -1,6 +1,7 @@
+from constants import *
+
 from src.internet_forensics.database.query import Queries
 from src.internet_forensics.logging.custom_logger import generate_custom_logger
-from constants import *
 
 _log = generate_custom_logger(name=PACKAGE_NAME)
 query = Queries()

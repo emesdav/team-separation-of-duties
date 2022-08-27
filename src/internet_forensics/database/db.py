@@ -1,5 +1,4 @@
-from sqlalchemy import create_engine
-from sqlalchemy import Column, String, Integer, Boolean
+from sqlalchemy import Boolean, Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
 # this connects to db

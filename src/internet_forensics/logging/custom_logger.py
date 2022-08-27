@@ -6,19 +6,14 @@ to build an auditable and detailed trace of all operations performed and/or warn
 import logging
 import os
 import sys
+
 import yaml
 
+from src.internet_forensics.constants import ENV_FILE_NAME
 from src.internet_forensics.utils import get_project_root
 
-from src.internet_forensics.constants import ENV_FILE_NAME
-from .constants import (
-    DATE_TIME_FMT,
-    EMPTY_STRING,
-    FOLDER_NAME_LOG_FILE,
-    LOG_FILE_NAME_W_EXT,
-    FORMAT_OF_LOG_MSG
-)
-
+from .constants import (DATE_TIME_FMT, EMPTY_STRING, FOLDER_NAME_LOG_FILE,
+                        FORMAT_OF_LOG_MSG, LOG_FILE_NAME_W_EXT)
 
 # Get app's root directory
 ROOT_DIR = str(get_project_root())
