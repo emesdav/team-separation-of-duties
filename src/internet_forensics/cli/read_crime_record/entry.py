@@ -9,7 +9,7 @@ from .run import read_crime_record_run
 
 @click.command()
 @click.option('--name_of_suspect',
-              required=False,
+              required=True,
               prompt='Enter the name of the suspect',
               help='The name of the suspect.')
 @click.option(
