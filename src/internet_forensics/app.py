@@ -7,4 +7,4 @@ try:
     result = u.user_creation()
     print(result)
 except Exception as e:
-    print("Eror: " + str(e))
+    print("Erorr: " + str(e))

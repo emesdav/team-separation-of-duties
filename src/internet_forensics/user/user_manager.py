@@ -1,9 +1,9 @@
 from typing import Union
 
-from constants import PACKAGE_NAME
+from .constants import PACKAGE_NAME
 
 from src.internet_forensics.database.query import Queries
-from src.internet_forensics.logging.custom_logger import generate_custom_logger
+from src.internet_forensics.log.custom_logger import generate_custom_logger
 
 _log = generate_custom_logger(name=PACKAGE_NAME)
 query = Queries()
@@ -40,8 +40,8 @@ class UserManager:
             _log.info("Login process completed")
 
             return user_id
-        except Exception as e:
-            _log.error(e)
+        except Exception as exc:
+            _log.error(exc)
             return None
 
     def user_password_reset(self) -> bool:
