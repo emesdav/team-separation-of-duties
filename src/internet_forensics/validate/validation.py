@@ -14,7 +14,7 @@ from ..utilities.multi_threading.multi_thread import threaded
 from .constants import (EMAIL_VALID_PATTERN, FIRST_SUB_STRING_VAL_LOG_MSG,
                         NAME_OF_DATA_VAL_LOG)
 
-custom_logger = generate_custom_logger(name=NAME_OF_DATA_VAL_LOG)
+validation_logger = generate_custom_logger(name=NAME_OF_DATA_VAL_LOG)
 
 
 class Validate:
@@ -32,7 +32,7 @@ class Validate:
         """
         if value is not None:
             self.value = value
-            custom_logger.debug(f"{'The value passed is: '}{self.value}")
+            validation_logger.debug(f"{'The value passed is: '}{self.value}")
         else:
             raise ValueError(
                 "No value has been provided. Please add a value correctly.")
@@ -57,10 +57,9 @@ class Validate:
         """
 
         if isinstance(self.value, int):
-            custom_logger.info(f""
-                               f"{'The following valid integer'}"
-                               f"{'value has been passed: '}"
-                               f"{self.value}")
+            validation_logger.info(
+              f"{'The following valid integer value has been passed: '}{self.value}"
+            )
             if self.value._state == STATE_FOR_THREAD:
                 return self.value._result
         else:
@@ -79,10 +78,8 @@ class Validate:
         """
 
         if isinstance(self.value, str):
-            custom_logger.info(
-                f""
-                f"{'The following valid string value has been passed: '}"
-                f"{self.value}"
+            validation_logger.info(
+              f"{'The following valid string value has been passed: '}{self.value}"
             )
             if self.value._state == STATE_FOR_THREAD:
                 return self.value._result
@@ -102,10 +99,8 @@ class Validate:
         """
 
         if isinstance(self.value, float):
-            custom_logger.info(
-                f""
-                f"{'The following valid float value has been passed: '}"
-                f"{self.value}"
+            validation_logger.info(
+              f"{'The following valid float value has been passed: '}{self.value}"
             )
             if self.value._state == STATE_FOR_THREAD:
                 return self.value._result
@@ -135,10 +130,8 @@ class Validate:
                 f"{FIRST_SUB_STRING_VAL_LOG_MSG}"
                 f"{'e-mail address: '}{self.value}")
         else:
-            custom_logger.info(
-                f""
-                f"{'The following valid e-mail address has been passed: '}"
-                f"{self.value}"
+            validation_logger.info(
+              f"{'The following valid e-mail address has been passed: '}{self.value}"
             )
 
         if is_email_valid._state == STATE_FOR_THREAD:
