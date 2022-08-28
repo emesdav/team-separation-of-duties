@@ -1,10 +1,13 @@
+import os
+
 from sqlalchemy import Boolean, Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
-from src.internet_forensics.constants import CRIME_RECORDS_TABLE_NAME, DB_FILE_NAME, SQLITE_PATH_PREFIX
+from src.internet_forensics.constants import CRIME_RECORDS_TABLE_NAME
+from .constants import SQLITE_PATH
 
 # Create engine to connect to the DB
-engine = create_engine(f"{SQLITE_PATH_PREFIX}{'../datastore/'}{DB_FILE_NAME}")
+engine = create_engine(f"{SQLITE_PATH}")
 
 # this is to manage tables
 base = declarative_base()

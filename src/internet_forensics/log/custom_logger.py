@@ -34,10 +34,10 @@ def generate_custom_logger(
         env: str = environment,
         output_folder: str = FOLDER_NAME_LOG_FILE,
         name: str = EMPTY_STRING
-) -> logging.Logger:
+):
     """
     This function creates a custom logger with the required
-    level of logging and formatting.
+    level of log and formatting.
 
     Args:
         env: string
@@ -57,7 +57,7 @@ def generate_custom_logger(
 
     custom_logger = logging.getLogger(name)
 
-    # Instantiate initial logger and set logging level based on
+    # Instantiate initial logger and set log level based on
     # the type of environment set in the app's config (.yml
     # file).
     if env == 'dev':
