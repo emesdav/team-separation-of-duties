@@ -22,6 +22,6 @@ dependencies:
       - -e .
 variables:
   # The environment 'ENV' variable could be either 'dev' (for development), 'test' (for testing), 'uat' (for user
-  # acceptance testing), or 'prod' (for production). Based on this variable, an appropriate level for logging is set,
+  # acceptance testing), or 'prod' (for production). Based on this variable, an appropriate level for log is set,
   # i.e., 'DEBUG' for 'dev', 'INFO' for 'test', 'WARNING' for 'uat', 'ERROR' for 'prod'.
   ENV: dev

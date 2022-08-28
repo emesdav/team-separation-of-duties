@@ -8,7 +8,7 @@ from typing import List
 from src.internet_forensics.database.db import CrimeRecords
 from src.internet_forensics.cli.constants import READ_ALL_RECORDS
 from src.internet_forensics.cli.utils import get_db_session_obj, get_num_repeat_crimes_and_descr
-from src.internet_forensics.logging.custom_logger import generate_custom_logger
+from src.internet_forensics.log.custom_logger import generate_custom_logger
 
 update_crime_record_logger = generate_custom_logger(name="Read crime record from the DB")
 

@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 
 from src.internet_forensics.encryption.encrypt import Encrypt
 
-from ..logging.custom_logger import generate_custom_logger
+from ..log.custom_logger import generate_custom_logger
 from .db import engine, Users as users
 
 custom_logger = generate_custom_logger(name="DB queries")
