@@ -1,5 +1,6 @@
 """
-The purpose of this file is to maintain constants used for validation of input values.
+The purpose of this file is to maintain constants
+used for validation of input values.
 """
 
 EMAIL_VALID_PATTERN = "[A-Za-z0-9._-]+@[A-Za-z0-9.-]+.[A-Z|a-z]{2,}"

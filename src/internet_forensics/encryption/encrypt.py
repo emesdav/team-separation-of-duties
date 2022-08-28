@@ -1,12 +1,16 @@
 """
-This file's purpose is to provide encryption features to all the system
-using Bcrypt library that follows cryptography security standards
+This file's purpose is to provide encryption features to the system
+using the 'bcrypt' library that adheres to cryptography security standards.
 """
 
 import os
+
 import bcrypt
 
-from src.internet_forensics.encryption.constants import ENCODING_METHOD, FOLDER_NAME_LOG_FILE, NAME_OF_DATA_VAL_LOG
+from src.internet_forensics.encryption.constants import (ENCODING_METHOD,
+                                                         FOLDER_NAME_LOG_FILE,
+                                                         NAME_OF_DATA_VAL_LOG)
+
 from ..logging.custom_logger import generate_custom_logger
 from ..utilities.multi_threading.multi_thread import threaded
 
@@ -20,10 +24,11 @@ custom_logger = generate_custom_logger(
 
 class Encrypt:
 
-    # @threaded
+    @threaded
     def hash_password(self, password: str) -> bytes:
         """
-        Hash a password and convert it to byte string. Then, encrypt it with random-generated salts and return
+        Hash a password and convert it to byte string.
+        Then, encrypt it with random-generated salts and return
         the encrypted password.
 
         Args:
@@ -42,10 +47,11 @@ class Encrypt:
 
         return hashed_password
 
-    # @threaded
+    @threaded
     def check_password(self, password: str, hashed_password: bytes) -> bool:
         """
-        Check if the un-hashed password matches the hashed password coming from the DB.
+        Check if the un-hashed password matches the hashed password
+        coming from the DB.
 
         Args:
             password: str
@@ -54,12 +60,17 @@ class Encrypt:
                     the hashed password in the DB.
 
         Returns: bool
-            True if the password matches the hashed password, False otherwise.
+            True if the password matches the hashed password,
+            False otherwise.
         """
 
         if bcrypt.checkpw(password.encode(ENCODING_METHOD), hashed_password):
-            custom_logger.debug(f"The password '{password}' matches the hashed password '{hashed_password}'.")
+            custom_logger.debug(
+                f"The password '{password}' matches the hashed password "
+                f"'{hashed_password}'.")
             return True
-        else:
-            custom_logger.debug(f"The password '{password}' does not match the hashed password '{hashed_password}'.")
-            return False
+
+        custom_logger.debug(
+            f"The password '{password}' does not match the hashed "
+            f"password '{hashed_password}'.")
+        return False

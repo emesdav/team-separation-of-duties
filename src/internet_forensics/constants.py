@@ -1,5 +1,6 @@
 """
-The purpose of this file is to maintain constants used throughout the application.
+The purpose of this file is to maintain constants used throughout the
+application.
 """
 
 CRIME_RECORDS_TABLE_NAME = 'CrimeRecords'
