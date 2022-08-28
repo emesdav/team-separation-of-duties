@@ -69,5 +69,9 @@ LOGIN_ATTEMPT_COUNT_REMAINING = "%(attempts_count)s out of %(allowed_attempts)s 
                                 "remaining "
 
 # Prompt instructions
-PROMPT_USERNAME = "Please enter Your email"
-PROMPT_PASSWORD = "Please enter your password"
+PROMPT_USERNAME = "Enter Your email"
+PROMPT_PASSWORD = "Enter your password"
+PROMPT_FIRSTNAME = "Enter your First name"
+PROMPT_LASTNAME = "Enter your Last Name"
+PROMPT_ADDRESS = "Enter your Address"
+PROMPT_EMAIL = "Enter your Email"
