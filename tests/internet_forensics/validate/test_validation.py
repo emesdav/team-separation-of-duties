@@ -47,7 +47,8 @@ class TestValidation(unittest.TestCase):
         result_integer_valid = Validate(VALID_INTEGER).validate_integer()
 
         if result_integer_valid._state == STATE_FOR_THREAD:
-            self.assertEqual(expected_integer_valid, result_integer_valid._result)
+            self.assertEqual(expected_integer_valid,
+                             result_integer_valid._result)
 
     def test_validate_integer_value_invalid(self):
         if Validate(INVALID_INTEGER).validate_integer()._state == STATE_FOR_THREAD:
@@ -62,7 +63,8 @@ class TestValidation(unittest.TestCase):
         result_string_valid = Validate(VALID_STRING).validate_string()
 
         if result_string_valid._state == STATE_FOR_THREAD:
-            self.assertEqual(expected_string_valid, result_string_valid._result)
+            self.assertEqual(expected_string_valid,
+                             result_string_valid._result)
 
     def test_validate_string_value_invalid(self):
         if Validate(INVALID_STRING).validate_string()._state == STATE_FOR_THREAD:
