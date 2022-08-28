@@ -12,8 +12,9 @@ dependencies:
   - isort=5.9.3
   - pylint=2.14.5
   - pyyaml=6.0.0
-  - sqlalchemy=1.4.39
+  - click=8.0.4
   - sqlite=3.38.5
+  - sqlalchemy=1.4.39
   - pip=21.2.4
   - pip:
       - bcrypt==3.2.2
