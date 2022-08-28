@@ -68,6 +68,25 @@ All tests can be run by executing `pytest tests`. To view the test coverage repo
 
 #### Test coverage ####
 
+### Linting ###
+
+`flake8` and `pylint` are the two libraries leveraged for performing the required checks for linting and stylising across 
+the entire codebase and they can be run as `flake8 src` and `pylint src` from the root directory (outside the `src` folder).
+Nevertheless, they only analyse the codebase for quality checks and do not rectify any issues identified by themselves.
+
+Thus, the libraries `isort` and `autopep8` were also installed for linting codes automatically, respectively ensuring that 
+the order of the imports is correct and consistent, and that the Python standards of PEP-8 are adhered across the entire codebase.
+`isort src` and `autopep8 --in-place --recursive . src` are the two commands that were run to execute both automatic adjustments 
+of codes recursively, i.e., across all directories within the project, under the `src` folder.
+
+The rest of the linting and stylising issues identified by the linters `flake8` and `pylint` were resolved manually, 
+i.e., by leveraging the reports obtained by running them and rectifying such issues in the codes themselves and re-running 
+both linters to ensure such issues were cleared.
+
+The results on initial scans performed via the above-mentioned two linting tools and those after the required refactoring 
+are stored as evidence in the form of screenshots under the `docs/evidence_linting_checks` directory with the two further main sub-directories named 
+`flake8_reports` and `pylint_reports`.
+
 ### Future work ###
 
 Future work will include:
