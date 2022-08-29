@@ -47,7 +47,17 @@ SQLite is used as CRUD operations need to be performed and their results need to
 
 ### Description of the solution implemented ###
 
+Under the `src/internet_forensics/cli` folder, four sub-folders are present, which include the command line interface (CLI)-based 
+entry points to perform the four CRUD operations, i.e., 'create' a crime record into the database (DB) under the `create_crime_record` folder, 
+'read' a crime record from the DB under the `read_crime_record` folder, 'update' a crime record into the DB under the `update_crime_record` folder, 
+and 'delete' a crime record from the DB under the `delete_crime_record` folder. The entry points can be viewed as defined 
+inside the `entry.py` file under each of the four above-mentioned sub-folders, whilst their underlying business logic 
+that interacts with the DB to update it accordingly is outlined in the `run.py` file under each of these four sub-folders.
+
 ### Instruction to execute the solution ###
+
+The solution can be consumed from the command line running the four above-mentioned entry points by executing the `entry.py` 
+files as main.
 
 ### Testing methodology ###
 
@@ -66,7 +76,10 @@ The following testing approaches have been adopted:
 All tests can be run by executing `pytest tests`. To view the test coverage report too, execute: 
 `pytest --cov=internet_forensics tests`.
 
-#### Test coverage ####
+#### Evidence of testing ####
+
+Evidence of functional testing demonstrating the successful execution of the four CLI-based entry points to perform the 
+CRUD operations is provided in the form of screenshots under the sub-folder `docs/evidence_functional_testing/crud_cli_entry_points_successful_runs/`.
 
 ### Linting ###
 
@@ -86,13 +99,6 @@ both linters to ensure such issues were cleared.
 The results on initial scans performed via the above-mentioned two linting tools and those after the required refactoring 
 are stored as evidence in the form of screenshots under the `docs/evidence_linting_checks` directory with the two further main sub-directories named 
 `flake8_reports` and `pylint_reports`.
-
-### Future work ###
-
-Future work will include:
-- TBD
-- TBD
-- TBD
 
 ### Team's rules regarding this repository ###
 
