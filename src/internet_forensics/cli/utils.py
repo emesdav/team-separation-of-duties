@@ -9,11 +9,11 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from src.internet_forensics.database.db import CrimeRecords
-from ..constants import DB_FILE_NAME, SQLITE_PATH_PREFIX
+from src.internet_forensics.constants import SQLITE_PATH_AND_FILE
 from ..cli.constants import INITIAL_NUM_OF_CRIMES
 
 
-def get_db_session_obj(name_of_db_file: str = DB_FILE_NAME) -> sessionmaker:  # pragma: no cover
+def get_db_session_obj(name_of_db_file=SQLITE_PATH_AND_FILE) -> sessionmaker:  # pragma: no cover
     """
     Get the DB's session object.
 
@@ -25,14 +25,8 @@ def get_db_session_obj(name_of_db_file: str = DB_FILE_NAME) -> sessionmaker:  # 
             the DB session maker.
     """
 
-    # Get absolute path to .db file based on input file name.
-    # This is important to ensure that the 'create_engine' function below allows to find the .db file and connect to
-    # it thereafter.
-    path_to_db_file = Path(name_of_db_file).resolve()
-    str_path_to_db_file = str(path_to_db_file)
-
     # Create session to connect to the DB
-    engine = create_engine(f"{SQLITE_PATH_PREFIX}{str_path_to_db_file}")
+    engine = create_engine(f"{name_of_db_file}")
     SessionMaker = sessionmaker(bind=engine)
     session_obj = SessionMaker()
 

@@ -14,8 +14,9 @@ import yaml
 from src.internet_forensics.constants import ENV_FILE_NAME
 from src.internet_forensics.utils import get_project_root
 
-from .constants import (DATE_TIME_FMT, EMPTY_STRING, FOLDER_NAME_LOG_FILE,
-                        FORMAT_OF_LOG_MSG, LOG_FILE_NAME_W_EXT)
+from .constants import (DATE_TIME_FMT, EMPTY_STRING,
+                        FORMAT_OF_LOG_MSG)
+from src.internet_forensics.constants import ROOT_DIRECTORY, LOG_PATH_AND_FILE
 
 # Get app's root directory
 ROOT_DIR = str(get_project_root())
@@ -32,7 +33,7 @@ with open(ENV_FILE_DIR, "r") as stream:
 
 def generate_custom_logger(
         env: str = environment,
-        output_folder: str = FOLDER_NAME_LOG_FILE,
+        output_folder: str = ROOT_DIRECTORY,
         name: str = EMPTY_STRING
 ):
     """
@@ -96,8 +97,7 @@ def generate_custom_logger(
     custom_logger.addHandler(handler_console)
 
     # Add file handler.
-    handler_file = logging.FileHandler(
-        os.path.join(output_folder, LOG_FILE_NAME_W_EXT))
+    handler_file = logging.FileHandler(f"{LOG_PATH_AND_FILE}")
     handler_file.setLevel(logging_level)
     handler_file.setFormatter(logging.Formatter(
         fmt=format_log, datefmt=DATE_TIME_FMT))
