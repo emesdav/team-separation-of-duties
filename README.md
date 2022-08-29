@@ -133,3 +133,13 @@ responsible for merging the PR once at least one approval is received.
   - '[PEP-8](https://peps.python.org/pep-0008/)' should be adhered to.
   - Ideally, a [Python package-like structure](https://docs.python-guide.org/writing/structure/) should be followed to enable the application to be installed via `pip` and 
     to facilitate testing.
+
+### Future work ###
+
+- Fix user error's integration bug during signup
+
+- "GDPR true" interface bug
+
+- Password reset full implementation and integration
+
+- Some visual and process bugs during file report and logout
