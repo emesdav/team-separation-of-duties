@@ -77,10 +77,10 @@ def privacy():
     click.echo(END_OF_MENU)
     user = UserManager(user_id=user_id)
     data = user.personal_data()
-    print(data)
-    app_privacy = "YES" if data.privacy else "NO"
-    gdpr_necessary = "YES" if data.GDPR_necessary else "NO"
-    gdpr_marketing = "YES" if data.GDPR_marketing else "NO"
+    click.echo("All Privacy and GDPR are mandatory.")
+    app_privacy = "YES"
+    gdpr_necessary = "YES"
+    gdpr_marketing = "YES"
     click.echo(DASHBOARD_PRIVACY % {"privacy": app_privacy,
                                     "GDPR_necessary": gdpr_necessary,
                                     "GDPR_marketing": gdpr_marketing})
