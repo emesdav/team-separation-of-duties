@@ -80,6 +80,7 @@ All tests can be run by executing `pytest tests`. To view the test coverage repo
 
 Evidence of functional testing demonstrating the successful execution of the four CLI-based entry points to perform the 
 CRUD operations is provided in the form of screenshots under the sub-folder `docs/evidence_functional_testing/crud_cli_entry_points_successful_runs/`.
+Additional proof of the working integration parts, queries and Database can be found in the respective folders under docs directory
 
 ### Linting ###
 
