@@ -139,8 +139,8 @@ responsible for merging the PR once at least one approval is received.
 
 - Fix user error's integration bug during signup
 
-- "GDPR true" interface bug
-
 - Password reset full implementation and integration
 
 - Some visual and process bugs during file report and logout
+
+- Further integration and unit testing
