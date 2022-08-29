@@ -1,3 +1,5 @@
+import time
+
 import click
 from datetime import date, timedelta
 from src.internet_forensics.constants import (
@@ -12,11 +14,11 @@ from src.internet_forensics.user.user_manager import UserManager
 from src.internet_forensics.cli.constants import CRIME_REPORTING_MENU_OPTION_LIST
 
 from src.internet_forensics.log.custom_logger import generate_custom_logger
+from src.internet_forensics.app import main
 
 user_id = 0
 _dashboard_menu_response = 0
-_log = generate_custom_logger(name="SQDFQSDF")
-_log.info("Login process started")
+_log = generate_custom_logger(name="DASHBOARD")
 
 
 @click.command()
@@ -116,12 +118,16 @@ def file_a_report():
     else:
         click.echo(WRONG_MENU_OPTION_INPUT)
 
-    # menu()
+    menu()
 
 
 @click.command()
 def logout():
+    global _dashboard_menu_response
+    _dashboard_menu_response = 0
     click.echo(TOP_HEADER)
     click.echo(DASHBOARD_MENU_OPTION_LIST)
     click.echo(END_OF_MENU)
-    menu()
+    click.echo("You have been successfully logged out. You will now be redirected to the main page")
+    time.sleep(5)
+    main()

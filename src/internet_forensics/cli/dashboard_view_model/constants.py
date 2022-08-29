@@ -1,9 +1,15 @@
 """
 The purpose of this file is to maintain constants used for Main inputs.
 """
+import time
+
+t = time.localtime()
+_current_time = time.strftime("%H:%M:%S", t)
 
 DASHBOARD_MENU_OPTION_LIST = \
-    "# SELECT MENU: [1]Profile [2]Privacy [3]File a Report [4]Logout  #"
+    f"# Current Time: {_current_time}                                        \n"\
+    "# SELECT MENU: [1]Profile [2]Privacy [3]File a Report [4]Logout  #"\
+
 
 DASHBOARD_PROFILE = \
     "\n" \
