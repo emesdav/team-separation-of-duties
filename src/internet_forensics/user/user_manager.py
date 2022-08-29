@@ -16,7 +16,7 @@ class UserManager:
 
     def __init__(self, email="", password="", firstname="",
                  lastname="", address="", mobile="", privacy="",
-                 gdpr_necessary="", gdpr_marketing=""):
+                 gdpr_necessary="", gdpr_marketing="", user_id=0):
         self.email = email
         self.password = password
         self.firstname = firstname
@@ -26,8 +26,9 @@ class UserManager:
         self.privacy = privacy
         self.gdpr_necessary = gdpr_necessary
         self.gdpr_marketing = gdpr_marketing
+        self.user_id = user_id
 
-    def user_login(self) -> Union[int, None]:
+    def user_login(self) -> int:
         """
         Returns: None if the provided credentials are wrong
         and a UserID if credentials were found
@@ -42,7 +43,7 @@ class UserManager:
             return user_id
         except Exception as exc:
             _log.error(exc)
-            return None
+            return 0
 
     def user_password_reset(self) -> bool:
         """
@@ -78,3 +79,19 @@ class UserManager:
             _log.error(exc)
             return None
 
+    def personal_data(self):
+        """
+        Returns: None if the provided credentials are wrong
+        and a UserID if credentials were found
+        """
+        try:
+            _log.info("Login process started")
+
+            user_data = query.personal_data(self.user_id)
+
+            _log.info("Login process completed")
+
+            return user_data
+        except Exception as exc:
+            _log.error(exc)
+            return None

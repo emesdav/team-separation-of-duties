@@ -3,11 +3,10 @@ import os
 from sqlalchemy import Boolean, Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
-from src.internet_forensics.constants import CRIME_RECORDS_TABLE_NAME
-from .constants import SQLITE_PATH
+from src.internet_forensics.constants import CRIME_RECORDS_TABLE_NAME, SQLITE_PATH_AND_FILE
 
 # Create engine to connect to the DB
-engine = create_engine(f"{SQLITE_PATH}")
+engine = create_engine(f"{SQLITE_PATH_AND_FILE}")
 
 # this is to manage tables
 base = declarative_base()

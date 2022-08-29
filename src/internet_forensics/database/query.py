@@ -21,17 +21,20 @@ class Queries:
         this method checks if the users exists,
         compares password with encrypted one and returns the id
         """
+        user_id = 0
         for instance in session.query(users).filter(users.email == email):
             if Encrypt().check_password(password, instance.password):
-                return instance.user_id
+                user_id = instance.user_id
+
+        return user_id
 
     def personal_data(self, user_id: int) -> object:
         """
         this method looks for a record corresponding to the user id
         and returns all their information
         """
-        for instance in session.query(users).filter(users.user_id == user_id):
-            return instance
+        instance = session.query(users).filter(users.user_id == user_id).first()
+        return instance
 
     def password_reset(
             self, user_id: int, old_password: str, new_password: str
